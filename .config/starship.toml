@@ -1,0 +1,121 @@
+format = """
+$newline
+[░▒▓](fg:#0b1813)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$nodejs\
+$bun\
+$deno\
+$aws\
+$cmd_duration\
+$time\
+$username\
+$character\
+"""
+
+palette = "voidcore"
+add_newline = false
+
+[palettes.voidcore]
+background = "#08110d"
+foreground = "#d7ffe8"
+
+primary = "#5cffb3"
+secondary = "#38d27a"
+tertiary = "#1fa463"
+
+surface = "#10241c"
+surface2 = "#163328"
+
+line = "#244739"
+highlight = "#7dffbf"
+
+muted = "#4d7d68"
+deep = "#0b1813"
+
+# ───────────────────────────────
+
+[os]
+disabled = false
+format = "[](fg:secondary)[ ](fg:background bg:secondary)[](fg:secondary bg:surface)"
+
+# ───────────────────────────────
+
+[directory]
+home_symbol = "󰋜 ~"
+truncation_length = 2
+truncation_symbol = "󰇘/"
+read_only = " "
+
+format = "[](fg:tertiary)[ ](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $path ](fg:foreground bg:surface2)[](fg:surface2)"
+
+# ───────────────────────────────
+
+[git_branch]
+symbol = "󰘬 "
+format = "(fg:secondary)[](fg:secondary)[$symbol](fg:background bg:secondary)[](fg:secondary bg:surface)[ $branch ](fg:highlight bg:surface)"
+
+[git_status]
+format = "[( $all_status )](fg:foreground bg:surface)[](fg:surface)"
+
+# ───────────────────────────────
+
+[nodejs]
+symbol = " "
+format = "(fg:tertiary)[](fg:tertiary)[$symbol](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $version ](fg:foreground bg:surface2)[](fg:surface2)"
+
+# ───────────────────────────────
+
+[bun]
+symbol = "󰳓 "
+format = "(fg:secondary)[](fg:secondary)[$symbol](fg:background bg:secondary)[](fg:secondary bg:surface)[ $version ](fg:foreground bg:surface)[](fg:surface)"
+
+# ───────────────────────────────
+
+[deno]
+symbol = "🜲 "
+format = "(fg:tertiary)[](fg:tertiary)[$symbol](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $version ](fg:foreground bg:surface2)[](fg:surface2)"
+
+# ───────────────────────────────
+
+[aws]
+symbol = "󰸏 "
+format = "(fg:secondary)[](fg:secondary)[$symbol](fg:background bg:secondary)[](fg:secondary bg:surface)[ $profile ](fg:foreground bg:surface)[](fg:surface)"
+
+# ───────────────────────────────
+
+[fill]
+symbol = "━"
+style = "fg:line"
+
+# ───────────────────────────────
+
+[cmd_duration]
+min_time = 500
+format = "(fg:tertiary)[](fg:tertiary)[󱎫](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $duration ](fg:highlight bg:surface2)[](fg:surface2)"
+
+# ───────────────────────────────
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "(fg:secondary)[](fg:secondary)[󱑍](fg:background bg:secondary)[](fg:secondary bg:surface)[ $time ](fg:foreground bg:surface)[](fg:surface)"
+
+# ───────────────────────────────
+
+[username]
+show_always = true
+format = "(fg:tertiary)[](fg:tertiary)[󰀄](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $user ](fg:foreground bg:surface2)[](fg:surface2)"
+
+# ───────────────────────────────
+
+[character] 
+success_symbol = "[╰─▶▶](fg:#5cffb3)" 
+error_symbol = "[╰─▶▶](fg:#ff5f5f)" 
+format = """ 
+[│](fg:line) 
+$symbol 
+"""
