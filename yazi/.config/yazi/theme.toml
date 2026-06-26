@@ -1,0 +1,99 @@
+[mgr]
+cwd = { fg = "#7dffbf" }
+
+hovered         = { fg = "#08110d", bg = "#5cffb3" }
+preview_hovered = { fg = "#08110d", bg = "#38d27a" }
+
+find_keyword  = { fg = "#08110d", bg = "#7dffbf", bold = true }
+find_position = { fg = "#7dffbf", bold = true }
+
+marker_copied   = { fg = "#5cffb3", bg = "#5cffb3" }
+marker_cut      = { fg = "#ff5f5f", bg = "#ff5f5f" }
+marker_selected = { fg = "#38d27a", bg = "#38d27a" }
+
+tab_active   = { fg = "#08110d", bg = "#5cffb3", bold = true }
+tab_inactive = { fg = "#4d7d68", bg = "#10241c" }
+
+border_symbol = "│"
+border_style  = { fg = "#244739" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+
+progress_label  = { fg = "#d7ffe8", bold = true }
+progress_normal = { fg = "#38d27a", bg = "#10241c" }
+progress_error  = { fg = "#ff5f5f", bg = "#10241c" }
+
+[select]
+border   = { fg = "#38d27a" }
+active   = { fg = "#5cffb3", bold = true }
+inactive = {}
+
+[input]
+border   = { fg = "#38d27a" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[completion]
+border = { fg = "#244739" }
+
+active   = { bg = "#163328" }
+inactive = {}
+
+[icon]  
+conds = [  
+	{ if = "dir", text = "", fg = "#5cffb3" },  
+	{ if = "file", text = "", fg = "#5cffb3" },  
+]
+dirs = [  
+	{ name = "Desktop", text = "", fg = "#5cffb3" },  
+	{ name = "Documents", text = "", fg = "#5cffb3" },  
+	{ name = "Downloads", text = "", fg = "#5cffb3" },  
+	{ name = "Public", text = "", fg = "#5cffb3" },  
+	{ name = "Pictures", text = "", fg = "#5cffb3" },  
+	{ name = "Music", text = "", fg = "#5cffb3" },  
+	{ name = "Videos", text = "", fg = "#5cffb3" },  
+]
+
+
+
+[tasks]
+border  = { fg = "#244739" }
+title   = { fg = "#5cffb3", bold = true }
+hovered = { fg = "#08110d", bg = "#5cffb3" }
+
+[which]
+cols            = 3
+mask            = { bg = "#08110d" }
+cand            = { fg = "#5cffb3" }
+rest            = { fg = "#4d7d68" }
+desc            = { fg = "#d7ffe8" }
+separator       = " ➜ "
+separator_style = { fg = "#244739" }
+
+[help]
+on      = { fg = "#7dffbf" }
+exec    = { fg = "#5cffb3" }
+desc    = { fg = "#d7ffe8" }
+hovered = { bg = "#163328", bold = true }
+footer  = { fg = "#08110d", bg = "#5cffb3" }
+
+[filetype]  
+rules = [  
+  { mime = "image/*", fg = "#7dffbf" },  
+  { mime = "video/*", fg = "#38d27a" },  
+  { mime = "audio/*", fg = "#5cffb3" },  
+  
+  { mime = "application/pdf", fg = "#7dffbf" },  
+  
+  { mime = "application/json", fg = "#5cffb3" },  
+  { mime = "*/javascript", fg = "#5cffb3" },  
+  { mime = "*/python", fg = "#38d27a" },  
+  { mime = "*/html", fg = "#7dffbf" },  
+  { mime = "*/css", fg = "#5cffb3" },  
+  
+  { url = "*/", fg = "#41a06a", bold = true },  
+  { url = "*", fg = "#5cffb3" }  
+]

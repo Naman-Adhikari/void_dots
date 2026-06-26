@@ -1,0 +1,25 @@
+[opener]    
+pdf = [    
+  { run = 'zathura "$@"', desc = "zathura" },    
+  { run = 'okular "$@"', desc = "okular" }    
+]    
+image = [    
+  { run = 'imv "$@"', desc = "imv" },    
+  { run = 'gimp "$@"', desc = "gimp" }    
+]    
+text = [  
+  { run = 'nvim "$@"', desc = "nvim", block = true, for = "unix" }  
+]  
+video = [  
+  { run = 'mpv "$@"', desc = "mpv" }  
+]  
+    
+[open]
+prepend_rules = [
+  { mime = "application/pdf", use = [ "pdf" ] },
+  { mime = "image/*", use = [ "image" ] },
+  { mime = "application/json", use = [ "text" ] },
+  { name = "*.jsonc", use = [ "text" ] },
+  { mime = "text/*", use = [ "text" ] },
+  { mime = "video/*", use = [ "video" ] },
+]

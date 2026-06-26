@@ -1,0 +1,698 @@
+{
+  "/bin/fish": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/usr/bin/dbus-daemon": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/usr/bin/wireplumber": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/usr/bin/pipewire": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/usr/sbin/nmclimonitor": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/app/zen/zen": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/bin/sh": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "./endcord": [
+    null,
+    null,
+    null,
+    1782019989
+  ],
+  "/usr/bin/gnome-keyring-daemon": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "nvim/home/lostfromlight/.config/endcord/config.ini": [
+    null,
+    null,
+    null,
+    1782131077
+  ],
+  "firefoxhttps//cdn.discordapp.com/attachments/1328032366282670233/1518131734737059950/clipboard_image_1782021206.png?ex=6a38cddb&is=6a377c5b&hm=a4de6a3447a6e88ffa194dc76bbac240caab666a6bc05a07fa5b635ae44052e4&": [
+    null,
+    null,
+    null,
+    1782021223
+  ],
+  "nvim/run/user/1000/endcord/message-1782022128038": [
+    null,
+    null,
+    null,
+    1782022130
+  ],
+  "/bin/sh/usr/sbin/xdg-open/home/lostfromlight/downloads/project reports outline.docx": [
+    null,
+    null,
+    null,
+    1782022504
+  ],
+  "firefoxhttps//cdn.discordapp.com/attachments/1514810388586430494/1518137405994041445/clipboard_image_1782022559.png?ex=6a38d323&is=6a3781a3&hm=8f87b4645f84f546c6b602d3e28fa1e04e19d5e134be5730781920955d2cc3ca&": [
+    null,
+    null,
+    null,
+    1782022569
+  ],
+  "/bin/sh/usr/sbin/xdg-open/run/user/1000/endcord/1518132596553285752_dawngate.jpg": [
+    null,
+    null,
+    null,
+    1782023246
+  ],
+  "nvim/home/lostfromlight/.config/endcord/media-player.sh": [
+    null,
+    null,
+    null,
+    1782023356
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518132596553285752_dawngate.jpgimg": [
+    null,
+    null,
+    null,
+    1782023460
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518132596553285752_dawngate.jpg": [
+    null,
+    null,
+    null,
+    1782023460
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518131734737059950_clipboard_image_1782021206.pngimg": [
+    null,
+    null,
+    null,
+    1782023470
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518131734737059950_clipboard_image_1782021206.png": [
+    null,
+    null,
+    null,
+    1782023470
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518141342415454318_newrice.mp4video": [
+    null,
+    null,
+    null,
+    1782023510
+  ],
+  "mpv/run/user/1000/endcord/1518141342415454318_newrice.mp4": [
+    null,
+    null,
+    null,
+    1782023510
+  ],
+  "/usr/sbin/sh": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/home/lostfromlight/.local/share/steam/ubuntu12_32/steam-runtime/usr/libexec/steam-runtime-tools-0/srt-logger": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/home/lostfromlight/.local/share/steam/ubuntu12_32/steam": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/home/lostfromlight/.local/share/steam/steamrt64/pv-runtime/steam-runtime-steamrt/pressure-vessel/libexec/steam-runtime-tools-0/srt-bwrap": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "./steamwebhelper": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/home/lostfromlight/.local/share/steam/ubuntu12_64/steamwebhelper": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/proc/self/exe": [
+    null,
+    null,
+    null,
+    1782453988
+  ],
+  "/usr/sbin/mmsggettagsedp-1": [
+    null,
+    null,
+    null,
+    1782127681
+  ],
+  "nvim/home/lostfromlight/lost/academia": [
+    null,
+    null,
+    null,
+    1782128316
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518584423417905172_clipboard_image_1782129136.pngimg": [
+    null,
+    null,
+    null,
+    1782129151
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518584423417905172_clipboard_image_1782129136.png": [
+    null,
+    null,
+    null,
+    1782129151
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518584498244026520_image.pngimg": [
+    null,
+    null,
+    null,
+    1782129191
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518584498244026520_image.png": [
+    null,
+    null,
+    null,
+    1782129191
+  ],
+  "firefoxhttps//discord.com/invite/srzk7e8aeg": [
+    null,
+    null,
+    null,
+    1782129441
+  ],
+  "sudosvstatus/var/service/agetty-tty1/var/service/agetty-tty3/var/service/agetty-tty4/var/service/agetty-tty5/var/service/agetty-tty6/var/service/bluetoothd/var/service/chronyd/var/service/dbus/var/service/elogind/var/service/ly/var/service/nbfc/var/service/networkmanager/var/service/polkitd/var/service/sshd/var/service/thermald/var/service/tlp/var/service/udevd": [
+    null,
+    null,
+    null,
+    1782139764
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518638029017845900_image.pngimg": [
+    null,
+    null,
+    null,
+    1782141929
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518638029017845900_image.png": [
+    null,
+    null,
+    null,
+    1782141929
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518990910220664984_image.pngimg": [
+    null,
+    null,
+    null,
+    1782226318
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518990910220664984_image.png": [
+    null,
+    null,
+    null,
+    1782226318
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518990964859998208_fft_audio_processing-2026-06-23-144726.pngimg": [
+    null,
+    null,
+    null,
+    1782226328
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518990964859998208_fft_audio_processing-2026-06-23-144726.png": [
+    null,
+    null,
+    null,
+    1782226328
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518991658350280704_image.pngimg": [
+    null,
+    null,
+    null,
+    1782226368
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518991658350280704_image.png": [
+    null,
+    null,
+    null,
+    1782226368
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518992035753889892_image.pngimg": [
+    null,
+    null,
+    null,
+    1782226388
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518992035753889892_image.png": [
+    null,
+    null,
+    null,
+    1782226388
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518993056110477522_image.pngimg": [
+    null,
+    null,
+    null,
+    1782226573
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518993056110477522_image.png": [
+    null,
+    null,
+    null,
+    1782226573
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518994488297525329_image.pngimg": [
+    null,
+    null,
+    null,
+    1782226923
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518994488297525329_image.png": [
+    null,
+    null,
+    null,
+    1782226923
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518994507402842213_image.pngimg": [
+    null,
+    null,
+    null,
+    1782226938
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518994507402842213_image.png": [
+    null,
+    null,
+    null,
+    1782226938
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518995463863402786_image.pngimg": [
+    null,
+    null,
+    null,
+    1782227158
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518995463863402786_image.png": [
+    null,
+    null,
+    null,
+    1782227158
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518995811206303834_clipboard_image_1782227204.pngimg": [
+    null,
+    null,
+    null,
+    1782227273
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518995811206303834_clipboard_image_1782227204.png": [
+    null,
+    null,
+    null,
+    1782227273
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518995844571988121_fft_audio_processing-2026-06-23-150653.pngimg": [
+    null,
+    null,
+    null,
+    1782227283
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518995844571988121_fft_audio_processing-2026-06-23-150653.png": [
+    null,
+    null,
+    null,
+    1782227283
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518996676650467489_fft_audio_processing-2026-06-23-151004.pngimg": [
+    null,
+    null,
+    null,
+    1782227459
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518996676650467489_fft_audio_processing-2026-06-23-151004.png": [
+    null,
+    null,
+    null,
+    1782227459
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518998945504952439_image.pngimg": [
+    null,
+    null,
+    null,
+    1782227989
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518998945504952439_image.png": [
+    null,
+    null,
+    null,
+    1782227989
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518999091281920020_image.pngimg": [
+    null,
+    null,
+    null,
+    1782228039
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518999091281920020_image.png": [
+    null,
+    null,
+    null,
+    1782228039
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518999941173739540_image.pngimg": [
+    null,
+    null,
+    null,
+    1782228274
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1518999941173739540_image.png": [
+    null,
+    null,
+    null,
+    1782228274
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519000417961250836_clipboard_image_1782228318.pngimg": [
+    null,
+    null,
+    null,
+    1782228329
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519000417961250836_clipboard_image_1782228318.png": [
+    null,
+    null,
+    null,
+    1782228329
+  ],
+  "/usr/sbin/cat/sys/class/power_supply/bat0/capacity": [
+    null,
+    null,
+    null,
+    1782228594
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519006073330335845_image.pngimg": [
+    null,
+    null,
+    null,
+    1782229684
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519006073330335845_image.png": [
+    null,
+    null,
+    null,
+    1782229684
+  ],
+  "firefoxhttps//cdn.discordapp.com/attachments/1514810388586430494/1519007778893729944/proposal_3.pdf?ex=6a3bfdbc&is=6a3aac3c&hm=8b013aaa60e2e052bb27a789c797eaab0e85d24769e07f469c1a8aa1dd6fff42&": [
+    null,
+    null,
+    null,
+    1782230094
+  ],
+  "firefoxhttps//www.youtube.com/watch?v=taiq1t22mhy": [
+    null,
+    null,
+    null,
+    1782230284
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519009373186167026_clipboard_image_1782230447.pngimg": [
+    null,
+    null,
+    null,
+    1782230474
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519009373186167026_clipboard_image_1782230447.png": [
+    null,
+    null,
+    null,
+    1782230474
+  ],
+  "/bin/sh./fpga.bin": [
+    null,
+    null,
+    null,
+    1782301197
+  ],
+  "/bin/bash./xsetup": [
+    null,
+    null,
+    null,
+    1782301197
+  ],
+  "/tmp/selfgz17700/tps/lnx64/jre21.0.5_11/bin/java": [
+    null,
+    null,
+    null,
+    1782301197
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519310340947443812_image.pngimg": [
+    null,
+    null,
+    null,
+    1782302222
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519310340947443812_image.png": [
+    null,
+    null,
+    null,
+    1782302222
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519310490231115816_image.pngimg": [
+    null,
+    null,
+    null,
+    1782302262
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519310490231115816_image.png": [
+    null,
+    null,
+    null,
+    1782302262
+  ],
+  "python3/home/lostfromlight/lost/scripts/bluetooth.py": [
+    null,
+    null,
+    null,
+    1782303407
+  ],
+  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/vlm": [
+    null,
+    null,
+    null,
+    1782304883
+  ],
+  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/loader": [
+    null,
+    null,
+    null,
+    1782305949
+  ],
+  "/home/lostfromlight/applications/xilinx/2025.2/vivado/tps/lnx64/jre21.0.5_11/bin/java": [
+    null,
+    null,
+    null,
+    1782304883
+  ],
+  "/bin/bash/home/lostfromlight/applications/xilinx/xic/xic": [
+    null,
+    null,
+    null,
+    1782307703
+  ],
+  "/home/lostfromlight/applications/xilinx/xic/tps/lnx64/jre21.0.5_11/bin/java": [
+    null,
+    null,
+    null,
+    1782307703
+  ],
+  "/bin/bash./vivado": [
+    null,
+    null,
+    null,
+    1782305954
+  ],
+  "/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/unwrapped/lnx64.o/vivado": [
+    null,
+    null,
+    null,
+    1782305954
+  ],
+  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/vivado": [
+    null,
+    null,
+    null,
+    1782306289
+  ],
+  "/home/lostfromlight/.wine/drive_c/program files/cisco packet tracer 8.2.2/bin/packettracer.exe": [
+    null,
+    null,
+    null,
+    1782310580
+  ],
+  "c/windows/system32/services.exe": [
+    null,
+    null,
+    null,
+    1782310580
+  ],
+  "c/windows/system32/winedevice.exe": [
+    null,
+    null,
+    null,
+    1782380536
+  ],
+  "c/windows/system32/svchost.exe": [
+    null,
+    null,
+    null,
+    1782310581
+  ],
+  "c/windows/system32/explorer.exe": [
+    null,
+    null,
+    null,
+    1782310581
+  ],
+  "c/windows/system32/plugplay.exe": [
+    null,
+    null,
+    null,
+    1782310581
+  ],
+  "c/windows/system32/rpcss.exe": [
+    null,
+    null,
+    null,
+    1782310581
+  ],
+  "c/program files/cisco packet tracer 8.2.2/bin/packettracer.exe": [
+    null,
+    null,
+    null,
+    1782310581
+  ],
+  "c/program files/cisco packet tracer 8.2.2/bin/qtwebengineprocess.exe": [
+    null,
+    null,
+    null,
+    1782310581
+  ],
+  "c/program files (x86)/microsoft/edgeupdate/microsoftedgeupdate.exe": [
+    null,
+    null,
+    null,
+    1782310581
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519345343169302609_image.pngimg": [
+    null,
+    null,
+    null,
+    1782310591
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519345343169302609_image.png": [
+    null,
+    null,
+    null,
+    1782310591
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1511741114233917470_image.pngimg": [
+    null,
+    null,
+    null,
+    1782380581
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1511741114233917470_image.png": [
+    null,
+    null,
+    null,
+    1782380581
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519710053496651857_image.pngimg": [
+    null,
+    null,
+    null,
+    1782402128
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519710053496651857_image.png": [
+    null,
+    null,
+    null,
+    1782402128
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519723284583682159_image.pngimg": [
+    null,
+    null,
+    null,
+    1782402163
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519723284583682159_image.png": [
+    null,
+    null,
+    null,
+    1782402163
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519945261869432902_image.pngimg": [
+    null,
+    null,
+    null,
+    1782453623
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519945261869432902_image.png": [
+    null,
+    null,
+    null,
+    1782453623
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519945579470389348_image.pngimg": [
+    null,
+    null,
+    null,
+    1782453673
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519945579470389348_image.png": [
+    null,
+    null,
+    null,
+    1782453673
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519946156220612638_image.pngimg": [
+    null,
+    null,
+    null,
+    1782453808
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1519946156220612638_image.png": [
+    null,
+    null,
+    null,
+    1782453808
+  ]
+}

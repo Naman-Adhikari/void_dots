@@ -1,0 +1,77 @@
+[
+  {
+    "guild_id": "1005603569187160125",
+    "channels": [
+      {
+        "channel_id": "1320881498848497755",
+        "summaries": [
+          {
+            "message_id": "1518903753917595688",
+            "topic": "Getting into Quant",
+            "description": "Dappster considers getting into quant if langdev doesn't work out, but it's more financially lucrative than compiler dev."
+          },
+          {
+            "message_id": "1518903753917595688",
+            "topic": "Getting into Quant",
+            "description": "Exploring quant as a career option, with financial and cracked devs."
+          },
+          {
+            "message_id": "1518904905149059122",
+            "topic": "Optimizing and Improving",
+            "description": "The journey doesn't end, there are always more ways to optimize and improve."
+          },
+          {
+            "message_id": "1518979556441067690",
+            "topic": "GitHub and Government Releases",
+            "description": "Discussion about moving off Github and the use of separate releases for government users."
+          },
+          {
+            "message_id": "1519660873306865734",
+            "topic": "Networking Stocks",
+            "description": "Discussion about networking stocks and taking advantage of Cisco's excellent credit rating."
+          }
+        ]
+      },
+      {
+        "channel_id": "1387937495047475291",
+        "summaries": [
+          {
+            "message_id": "1518568576183832636",
+            "topic": "Job Market and Careers",
+            "description": "Discussion about job market, career paths, and job opportunities."
+          },
+          {
+            "message_id": "1518568576183832636",
+            "topic": "Job Market and Careers",
+            "description": "Discussion about job market and career paths, including restaurants, libraries, and people shopping."
+          }
+        ]
+      },
+      {
+        "channel_id": "1388968082449629356",
+        "summaries": [
+          {
+            "message_id": "1518395324148875487",
+            "topic": "Forgejo and Global Runners",
+            "description": "Discussion about Forgejo and global runners, including ezpz and autonice."
+          }
+        ]
+      },
+      {
+        "channel_id": "1387937279393136724",
+        "summaries": [
+          {
+            "message_id": "1519031624153698494",
+            "topic": "New to Nix",
+            "description": "Discussion about learning Nix and resources for self-learning."
+          },
+          {
+            "message_id": "1519031624153698494",
+            "topic": "Learning Nix",
+            "description": "Discussion about learning Nix and resources for beginners."
+          }
+        ]
+      }
+    ]
+  }
+]

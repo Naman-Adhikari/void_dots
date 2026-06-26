@@ -1,0 +1,143 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "display": {
+    "separator": " : "
+  },
+
+  "logo": {
+    "source": "~/.config/fastfetch/logo.png",
+    "type": "auto",
+    "width": 42,
+    "height": 16,
+    "padding": {
+      "top": 3,
+      "left": 3
+    }
+  },
+
+  "modules": [
+    "break",
+
+    {
+      "type": "custom",
+      "format": "               \u001b[38;5;22m░\u001b[38;5;28m▒\u001b[38;5;34m▓\u001b[38;5;40m█  SYSTEM MATRIX  █\u001b[38;5;34m▓\u001b[38;5;28m▒\u001b[38;5;22m░"
+    },
+
+    "break",
+
+    {
+      "type": "os",
+      "key": "󰣇  OPERATING-SYSTEM",
+      "keyColor": "#2f5e46",
+      "outputColor": "#d8ffe8"
+    },
+
+    {
+      "type": "host",
+      "key": "󰌢  MACHINE-ID",
+      "keyColor": "#3f7d5c",
+      "outputColor": "#b7ffd0"
+    },
+
+    {
+      "type": "kernel",
+      "key": "  KERNEL-CORE",
+      "keyColor": "#55a67a",
+      "outputColor": "#d8ffe8"
+    },
+
+    {
+      "type": "uptime",
+      "key": "󱎫  NODE-UPTIME",
+      "keyColor": "#2f5e46",
+      "outputColor": "#b7ffd0"
+    },
+
+    {
+      "type": "packages",
+      "key": "󰏖  PACKAGE-ARRAY",
+      "keyColor": "#3f7d5c",
+      "outputColor": "#d8ffe8"
+    },
+
+    {
+      "type": "shell",
+      "key": "  COMMAND-SHELL",
+      "keyColor": "#55a67a",
+      "outputColor": "#b7ffd0"
+    },
+
+    {
+      "type": "wm",
+      "key": "  DISPLAY-PROTOCOL",
+      "keyColor": "#2f5e46",
+      "outputColor": "#d8ffe8"
+    },
+
+    {
+      "type": "terminal",
+      "key": "  TERMINAL-INTERFACE",
+      "keyColor": "#3f7d5c",
+      "outputColor": "#b7ffd0"
+    },
+
+    {
+      "type": "terminalfont",
+      "key": "󰛖  GLYPH-RENDERER",
+      "keyColor": "#55a67a",
+      "outputColor": "#d8ffe8"
+    },
+
+    {
+      "type": "cpu",
+      "key": "󰻠  PROCESSOR-UNIT",
+      "keyColor": "#2f5e46",
+      "outputColor": "#b7ffd0"
+    },
+
+    {
+      "type": "gpu",
+      "key": "󰢮  GRAPHICS-ARRAY",
+      "keyColor": "#3f7d5c",
+      "outputColor": "#d8ffe8"
+    },
+
+    {
+      "type": "memory",
+      "key": "󰍛  MEMORY-CACHE",
+      "keyColor": "#55a67a",
+      "outputColor": "#b7ffd0"
+    },
+
+    {
+      "type": "disk",
+      "key": "  STORAGE-VAULT",
+      "keyColor": "#2f5e46",
+      "outputColor": "#d8ffe8"
+    },
+
+    {
+      "type": "wifi",
+      "key": "󰖩  NETWORK-LINK",
+      "keyColor": "#3f7d5c",
+      "outputColor": "#b7ffd0"
+    },
+
+    {
+      "type": "localip",
+      "compact": true,
+      "key": "󰩠  ACCESS-POINT",
+      "keyColor": "#55a67a",
+      "outputColor": "#d8ffe8"
+    },
+
+    "break",
+
+
+    {
+      "type": "custom",
+      "format": "       \u001b[38;5;42m        [ VOID LINK ESTABLISHED ]"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+# ===== Base =====
+*.default=true
+*.normal=true
+
+title.bg=#050805
+title.fg=#5f9e5f
+title.bold=true
+
+header.bold=true
+
+border.fg=#102010
+
+# ===== Tabs =====
+tab.bg=#081008
+tab.fg=#356835
+
+tab.selected.bg=#143014
+tab.selected.fg=#9ccf9c
+tab.selected.bold=true
+
+# ===== Statusline =====
+statusline_default.fg=#356835
+statusline_default.reverse=true
+
+# ===== Directory List =====
+dirlist_unread.fg=#7ab87a
+dirlist_unread.bold=true
+
+# ===== Message List =====
+
+# Unread mail
+msglist_unread.fg=#9ccf9c
+msglist_unread.bold=true
+
+# Flagged mail
+msglist_flagged.fg=#b8c96b
+msglist_flagged.bold=true
+
+# Marked mail
+msglist_marked.bg=#143014
+msglist_marked.fg=#c0e0c0
+
+# Selected item
+*.selected.bg=#0f220f
+*.selected.fg=#d0ffd0
+*.selected.bold=true
+
+msglist_pill.reverse=true
+
+# ===== MIME Parts =====
+part_*.fg=#9ccf9c
+part_mimetype.fg=#356835
+part_*.selected.fg=#ffffff
+part_filename.selected.bold=true
+
+[viewer]
+*.default=true
+*.normal=true
+
+header.bold=true
+
+url.fg=#7ab87a
+url.underline=true
+
+signature.dim=true
+
+quote_1.fg=#7ab87a
+quote_2.fg=#5f9e5f
+quote_3.fg=#356835
+quote_*.dim=true
+quote_1.dim=false
