@@ -1,11 +1,11 @@
 --keys for opening specific files
 
 vim.keymap.set("n", "<leader>oc", function()
-	vim.cmd("edit ~/.config/mango/config.conf")
+	vim.cmd("edit ~/dotfiles/mango/.config/mango/config.conf")
 end)
 
 vim.keymap.set("n", "<leader>ob", function()
-	vim.cmd("edit ~/.config/mango/bind.conf")
+	vim.cmd("edit ~/dotfiles/mango/.config/mango/bind.conf")
 end)
 
 -- keys for saving and quitting files
