@@ -38,12 +38,27 @@
           {
             "message_id": "1518568576183832636",
             "topic": "Job Market and Careers",
-            "description": "Discussion about job market, career paths, and job opportunities."
+            "description": "Discussion about job market and career paths, including restaurants, libraries, and people shopping."
           },
           {
-            "message_id": "1518568576183832636",
-            "topic": "Job Market and Careers",
-            "description": "Discussion about job market and career paths, including restaurants, libraries, and people shopping."
+            "message_id": "1519768997447467109",
+            "topic": "North Mini-Code",
+            "description": "Discussion about the North Mini-code and its existence"
+          },
+          {
+            "message_id": "1519769353976025381",
+            "topic": "Canadians vs USA",
+            "description": "Discussion about the choice of team USA over Canada in the hockey match."
+          },
+          {
+            "message_id": "1519983182278164620",
+            "topic": "PS5 Purchase",
+            "description": "Aldus PageMaker purchased the PS5 on launch and plans to sell it today and buy a house."
+          },
+          {
+            "message_id": "1520040502500659373",
+            "topic": "Work and Money",
+            "description": "A conversation about work and money, with some funny comments."
           }
         ]
       },
@@ -69,6 +84,26 @@
             "message_id": "1519031624153698494",
             "topic": "Learning Nix",
             "description": "Discussion about learning Nix and resources for beginners."
+          }
+        ]
+      },
+      {
+        "channel_id": "1388970799183958176",
+        "summaries": [
+          {
+            "message_id": "1519844254967664650",
+            "topic": "Containers and Pass-Through",
+            "description": "Discussion about using containers for pass-through for GPUs and their use in server configuration."
+          },
+          {
+            "message_id": "1519853873735663616",
+            "topic": "Container Talk",
+            "description": "Discussion about missing container talk and using what was learned."
+          },
+          {
+            "message_id": "1520041988576120916",
+            "topic": "Server OS Market",
+            "description": "Discussion about the market for a new server OS and its usecase."
           }
         ]
       }

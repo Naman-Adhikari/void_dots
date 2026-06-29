@@ -45,6 +45,7 @@ abbr -a rem "sudo xbps-remove -R "
 abbr -a ser "sudo ln -s /etc/sv"
 abbr -a blu "python3 ~/Lost/Scripts/bluetooth.py"
 abbr -a col " npm --prefix ~/Lost/Programming/Rust/Tauri/Lumus run tauri dev"
+abbr -a pa "pass show -c"
 #abbr -a vivado "~/Applications/Xilinx/2025.2/Vivado/bin/vivado"
 #abbr -a vitis "~/Applications/Xilinx/2025.2/Vitis/bin/vitis"
 
