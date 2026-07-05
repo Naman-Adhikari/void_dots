@@ -1,35 +1,35 @@
-2026-06-29-20:00:45 - INFO
+2026-07-05-12:34:22 - INFO
   [main]: Started endcord 1.5.0
 
-2026-06-29-20:00:48 - INFO
+2026-07-05-12:34:22 - INFO
   [app]: Build info:
   Python 3.14.6 (main, Jun 12 2026, 12:41:11) [GCC 14.2.1 20250405] on linux
   Features: pyinstaller, media support, call support
 
-2026-06-29-20:00:48 - INFO
+2026-07-05-12:34:22 - INFO
   [app]: Connecting to Discord
 
-2026-06-29-20:00:49 - INFO
+2026-07-05-12:34:22 - INFO
   [peripherals]: Spellchecking disabled: Aspell not found
 
-2026-06-29-20:00:49 - INFO
+2026-07-05-12:34:22 - INFO
   [app]: Init sequence started
 
-2026-06-29-20:00:49 - INFO
+2026-07-05-12:34:22 - INFO
   [app]: Waiting for ready signal from gateway
 
-2026-06-29-20:00:51 - INFO
+2026-07-05-12:34:24 - INFO
   [app]: Gateway is ready
 
-2026-06-29-20:00:51 - INFO
+2026-07-05-12:34:24 - INFO
   [app]: Input handler loop started
 
-2026-06-29-20:00:51 - INFO
-  [app]: Main loop started after 2597.85 ms
+2026-07-05-12:34:24 - INFO
+  [app]: Main loop started after 2556.299 ms
 
-2026-06-29-20:00:51 - INFO
+2026-07-05-12:34:24 - INFO
   [rpc]: RPC server started
 
-2026-06-29-20:00:51 - INFO
+2026-07-05-12:34:24 - INFO
   [game_detection]: Game detection service started
 

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Wallpaper
+swww-daemon &
+
+# Bar
+quickshell --config bar &
+
+# Clipboard history
+wl-paste --type text --watch cliphist store &
+
+# Audio
+pipewire &
+# pipewire-pulse &
+# wireplumber &
+
+# Notifications
+dunst &
+
+# Portals
+/usr/libexec/xdg-desktop-portal-wlr &
+/usr/libexec/xdg-desktop-portal &
+
+# Finally start the compositor
+ rill &

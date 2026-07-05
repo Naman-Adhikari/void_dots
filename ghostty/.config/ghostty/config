@@ -5,8 +5,8 @@ font-size = 14
 #background-image-opacity = 4.2
 #background-image-fit = cover
 background = 000000
-foreground = ffffff
-cursor-color = ffffff
+foreground = 8af78a
+cursor-color = 8af78a
 selection-background = 333333
 selection-foreground = ffffff
 

@@ -84,6 +84,11 @@
             "message_id": "1519031624153698494",
             "topic": "Learning Nix",
             "description": "Discussion about learning Nix and resources for beginners."
+          },
+          {
+            "message_id": "1522364249400414268",
+            "topic": "Tightness Issues",
+            "description": "Discussion about getting throttled by ISP or GitHub, needing VPN to even make it to buildPhase."
           }
         ]
       },
@@ -104,6 +109,36 @@
             "message_id": "1520041988576120916",
             "topic": "Server OS Market",
             "description": "Discussion about the market for a new server OS and its usecase."
+          }
+        ]
+      },
+      {
+        "channel_id": "1436781097416654939",
+        "summaries": [
+          {
+            "message_id": "1521388826986156045",
+            "topic": "AI Subscriptions",
+            "description": "Discussion about faster providers and a request for an AI subscription."
+          },
+          {
+            "message_id": "1521388826986156045",
+            "topic": "AI Subscriptions",
+            "description": "Discussion about faster providers and a request for an AI subscription."
+          },
+          {
+            "message_id": "1522250355671302274",
+            "topic": "Chinese AI",
+            "description": "Discussion about the use of Chinese AI and its affordability."
+          },
+          {
+            "message_id": "1522250355671302274",
+            "topic": "Chinese AI",
+            "description": "Discussion about using Chinese AI and its cheapness."
+          },
+          {
+            "message_id": "1522252967724712108",
+            "topic": "Fable Project",
+            "description": "Discussion about starting a new Fable project with Jepsen testing built in."
           }
         ]
       }

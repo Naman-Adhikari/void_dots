@@ -3,672 +3,750 @@
     null,
     null,
     null,
-    1782742551
+    1783234164
   ],
   "/usr/bin/dbus-daemon": [
     null,
     null,
     null,
-    1782742551
+    1783234164
   ],
   "/usr/bin/wireplumber": [
     null,
     null,
     null,
-    1782742551
+    1783234164
   ],
   "/usr/bin/pipewire": [
     null,
     null,
     null,
-    1782742551
+    1783234164
   ],
   "/usr/sbin/nmclimonitor": [
     null,
     null,
     null,
-    1782742551
+    1783234164
   ],
   "/app/zen/zen": [
     null,
     null,
     null,
-    1782742551
+    1783168418
   ],
   "/bin/sh": [
     null,
     null,
     null,
-    1782726145
+    1783234164
   ],
   "/usr/bin/gnome-keyring-daemon": [
     null,
     null,
     null,
-    1782742551
+    1783234164
   ],
   "/usr/sbin/sh": [
     null,
     null,
     null,
-    1782473976
+    1783234164
   ],
   "/home/lostfromlight/.local/share/steam/ubuntu12_32/steam-runtime/usr/libexec/steam-runtime-tools-0/srt-logger": [
     null,
     null,
     null,
-    1782473976
+    1783234164
   ],
   "/home/lostfromlight/.local/share/steam/ubuntu12_32/steam": [
     null,
     null,
     null,
-    1782473976
+    1783234164
   ],
   "/home/lostfromlight/.local/share/steam/steamrt64/pv-runtime/steam-runtime-steamrt/pressure-vessel/libexec/steam-runtime-tools-0/srt-bwrap": [
     null,
     null,
     null,
-    1782473976
+    1783234164
   ],
   "./steamwebhelper": [
     null,
     null,
     null,
-    1782473976
+    1783234164
   ],
   "/home/lostfromlight/.local/share/steam/ubuntu12_64/steamwebhelper": [
     null,
     null,
     null,
-    1782473976
+    1783234164
   ],
   "/proc/self/exe": [
     null,
     null,
     null,
-    1782473976
-  ],
-  "sudosvstatus/var/service/agetty-tty1/var/service/agetty-tty3/var/service/agetty-tty4/var/service/agetty-tty5/var/service/agetty-tty6/var/service/bluetoothd/var/service/chronyd/var/service/dbus/var/service/elogind/var/service/ly/var/service/nbfc/var/service/networkmanager/var/service/polkitd/var/service/sshd/var/service/thermald/var/service/tlp/var/service/udevd": [
-    null,
-    null,
-    null,
-    1782139764
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518638029017845900_image.pngimg": [
-    null,
-    null,
-    null,
-    1782141929
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518638029017845900_image.png": [
-    null,
-    null,
-    null,
-    1782141929
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518990910220664984_image.pngimg": [
-    null,
-    null,
-    null,
-    1782226318
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518990910220664984_image.png": [
-    null,
-    null,
-    null,
-    1782226318
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518990964859998208_fft_audio_processing-2026-06-23-144726.pngimg": [
-    null,
-    null,
-    null,
-    1782226328
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518990964859998208_fft_audio_processing-2026-06-23-144726.png": [
-    null,
-    null,
-    null,
-    1782226328
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518991658350280704_image.pngimg": [
-    null,
-    null,
-    null,
-    1782226368
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518991658350280704_image.png": [
-    null,
-    null,
-    null,
-    1782226368
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518992035753889892_image.pngimg": [
-    null,
-    null,
-    null,
-    1782226388
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518992035753889892_image.png": [
-    null,
-    null,
-    null,
-    1782226388
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518993056110477522_image.pngimg": [
-    null,
-    null,
-    null,
-    1782226573
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518993056110477522_image.png": [
-    null,
-    null,
-    null,
-    1782226573
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518994488297525329_image.pngimg": [
-    null,
-    null,
-    null,
-    1782226923
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518994488297525329_image.png": [
-    null,
-    null,
-    null,
-    1782226923
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518994507402842213_image.pngimg": [
-    null,
-    null,
-    null,
-    1782226938
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518994507402842213_image.png": [
-    null,
-    null,
-    null,
-    1782226938
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518995463863402786_image.pngimg": [
-    null,
-    null,
-    null,
-    1782227158
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518995463863402786_image.png": [
-    null,
-    null,
-    null,
-    1782227158
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518995811206303834_clipboard_image_1782227204.pngimg": [
-    null,
-    null,
-    null,
-    1782227273
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518995811206303834_clipboard_image_1782227204.png": [
-    null,
-    null,
-    null,
-    1782227273
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518995844571988121_fft_audio_processing-2026-06-23-150653.pngimg": [
-    null,
-    null,
-    null,
-    1782227283
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518995844571988121_fft_audio_processing-2026-06-23-150653.png": [
-    null,
-    null,
-    null,
-    1782227283
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518996676650467489_fft_audio_processing-2026-06-23-151004.pngimg": [
-    null,
-    null,
-    null,
-    1782227459
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518996676650467489_fft_audio_processing-2026-06-23-151004.png": [
-    null,
-    null,
-    null,
-    1782227459
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518998945504952439_image.pngimg": [
-    null,
-    null,
-    null,
-    1782227989
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518998945504952439_image.png": [
-    null,
-    null,
-    null,
-    1782227989
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518999091281920020_image.pngimg": [
-    null,
-    null,
-    null,
-    1782228039
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518999091281920020_image.png": [
-    null,
-    null,
-    null,
-    1782228039
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1518999941173739540_image.pngimg": [
-    null,
-    null,
-    null,
-    1782228274
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1518999941173739540_image.png": [
-    null,
-    null,
-    null,
-    1782228274
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519000417961250836_clipboard_image_1782228318.pngimg": [
-    null,
-    null,
-    null,
-    1782228329
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519000417961250836_clipboard_image_1782228318.png": [
-    null,
-    null,
-    null,
-    1782228329
-  ],
-  "/usr/sbin/cat/sys/class/power_supply/bat0/capacity": [
-    null,
-    null,
-    null,
-    1782228594
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519006073330335845_image.pngimg": [
-    null,
-    null,
-    null,
-    1782229684
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519006073330335845_image.png": [
-    null,
-    null,
-    null,
-    1782229684
-  ],
-  "firefoxhttps//cdn.discordapp.com/attachments/1514810388586430494/1519007778893729944/proposal_3.pdf?ex=6a3bfdbc&is=6a3aac3c&hm=8b013aaa60e2e052bb27a789c797eaab0e85d24769e07f469c1a8aa1dd6fff42&": [
-    null,
-    null,
-    null,
-    1782230094
-  ],
-  "firefoxhttps//www.youtube.com/watch?v=taiq1t22mhy": [
-    null,
-    null,
-    null,
-    1782230284
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519009373186167026_clipboard_image_1782230447.pngimg": [
-    null,
-    null,
-    null,
-    1782230474
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519009373186167026_clipboard_image_1782230447.png": [
-    null,
-    null,
-    null,
-    1782230474
-  ],
-  "/bin/sh./fpga.bin": [
-    null,
-    null,
-    null,
-    1782301197
-  ],
-  "/bin/bash./xsetup": [
-    null,
-    null,
-    null,
-    1782301197
-  ],
-  "/tmp/selfgz17700/tps/lnx64/jre21.0.5_11/bin/java": [
-    null,
-    null,
-    null,
-    1782301197
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519310340947443812_image.pngimg": [
-    null,
-    null,
-    null,
-    1782302222
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519310340947443812_image.png": [
-    null,
-    null,
-    null,
-    1782302222
-  ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519310490231115816_image.pngimg": [
-    null,
-    null,
-    null,
-    1782302262
-  ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519310490231115816_image.png": [
-    null,
-    null,
-    null,
-    1782302262
-  ],
-  "python3/home/lostfromlight/lost/scripts/bluetooth.py": [
-    null,
-    null,
-    null,
-    1782303407
-  ],
-  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/vlm": [
-    null,
-    null,
-    null,
-    1782304883
-  ],
-  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/loader": [
-    null,
-    null,
-    null,
-    1782305949
-  ],
-  "/home/lostfromlight/applications/xilinx/2025.2/vivado/tps/lnx64/jre21.0.5_11/bin/java": [
-    null,
-    null,
-    null,
-    1782304883
-  ],
-  "/bin/bash/home/lostfromlight/applications/xilinx/xic/xic": [
-    null,
-    null,
-    null,
-    1782307703
-  ],
-  "/home/lostfromlight/applications/xilinx/xic/tps/lnx64/jre21.0.5_11/bin/java": [
-    null,
-    null,
-    null,
-    1782307703
-  ],
-  "/bin/bash./vivado": [
-    null,
-    null,
-    null,
-    1782305954
-  ],
-  "/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/unwrapped/lnx64.o/vivado": [
-    null,
-    null,
-    null,
-    1782305954
-  ],
-  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/vivado": [
-    null,
-    null,
-    null,
-    1782306289
-  ],
-  "/home/lostfromlight/.wine/drive_c/program files/cisco packet tracer 8.2.2/bin/packettracer.exe": [
-    null,
-    null,
-    null,
-    1782310580
+    1783234164
   ],
   "c/windows/system32/services.exe": [
     null,
     null,
     null,
-    1782310580
+    1783168418
   ],
   "c/windows/system32/winedevice.exe": [
     null,
     null,
     null,
-    1782380536
+    1783168418
   ],
   "c/windows/system32/svchost.exe": [
     null,
     null,
     null,
-    1782310581
+    1783168418
   ],
   "c/windows/system32/explorer.exe": [
     null,
     null,
     null,
-    1782310581
+    1782833779
   ],
   "c/windows/system32/plugplay.exe": [
     null,
     null,
     null,
-    1782310581
+    1783168418
   ],
   "c/windows/system32/rpcss.exe": [
     null,
     null,
     null,
-    1782310581
+    1783168418
   ],
-  "c/program files/cisco packet tracer 8.2.2/bin/packettracer.exe": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-nbb7cd3qsb/dev/dri/card0": [
     null,
     null,
     null,
-    1782310581
+    1782749775
   ],
-  "c/program files/cisco packet tracer 8.2.2/bin/qtwebengineprocess.exe": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-iiljystla6/dev/dri/card0": [
     null,
     null,
     null,
-    1782310581
+    1782749775
   ],
-  "c/program files (x86)/microsoft/edgeupdate/microsoftedgeupdate.exe": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-sclicz9ppu/dev/dri/card0": [
     null,
     null,
     null,
-    1782310581
+    1782749775
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519345343169302609_image.pngimg": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-hvelv9grve/dev/dri/card0": [
     null,
     null,
     null,
-    1782310591
+    1782749775
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519345343169302609_image.png": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-eb55xgseut/dev/dri/card0": [
     null,
     null,
     null,
-    1782310591
+    1782749775
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1511741114233917470_image.pngimg": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-qjuz8pcls5/dev/dri/card0": [
     null,
     null,
     null,
-    1782380581
+    1782749775
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1511741114233917470_image.png": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-evtyqnivrn/dev/dri/card0": [
     null,
     null,
     null,
-    1782380581
+    1782749775
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519710053496651857_image.pngimg": [
+  "nvim/home/lostfromlight/dotfiles/scripts/copy-ss.sh": [
     null,
     null,
     null,
-    1782402128
+    1782749850
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519710053496651857_image.png": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-ss2q43fdmq/dev/dri/card0": [
     null,
     null,
     null,
-    1782402128
+    1782749925
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519723284583682159_image.pngimg": [
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1521188207222591560_clipboard_image_1782749925.pngimg": [
     null,
     null,
     null,
-    1782402163
+    1782750030
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519723284583682159_image.png": [
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1521188207222591560_clipboard_image_1782749925.png": [
     null,
     null,
     null,
-    1782402163
+    1782750030
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519945261869432902_image.pngimg": [
+  "/bin/sh/usr/sbin/xdg-open/home/lostfromlight/downloads/clair obscur": [
     null,
     null,
     null,
-    1782453623
+    1782829476
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519945261869432902_image.png": [
+  "qbittorrent/home/lostfromlight/downloads/clair obscur": [
     null,
     null,
     null,
-    1782453623
+    1782829476
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519945579470389348_image.pngimg": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-gnlb4nafij/dev/dri/card0": [
     null,
     null,
     null,
-    1782453673
+    1782840275
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519945579470389348_image.png": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-wkliaq32to/dev/dri/card0": [
     null,
     null,
     null,
-    1782453673
+    1782840275
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1519946156220612638_image.pngimg": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-nfysumlgfr/dev/dri/card0": [
     null,
     null,
     null,
-    1782453808
+    1782840275
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/1519946156220612638_image.png": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-8bzfpxrqbj/dev/dri/card0": [
     null,
     null,
     null,
-    1782453808
+    1782840275
   ],
-  "firefoxhttps//drive.google.com/drive/folders/1njn9mekd6rp2wgsxpr--aehvqr3jetje": [
+  "/home/lostfromlight/.local/share/steam/ubuntu12_32/reapersteamlaunchappid=2736571646": [
     null,
     null,
     null,
-    1782474041
+    1782833784
   ],
-  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/prakash-raj-cheating.gifgif": [
+  "/home/lostfromlight/.local/share/steam/steamapps/common/steamlinuxruntime_sniper/pressure-vessel/libexec/steam-runtime-tools-0/srt-bwrap": [
     null,
     null,
     null,
-    1782474446
+    1782833784
   ],
-  "/usr/bin/imv-wayland/run/user/1000/endcord/prakash-raj-cheating.gif": [
+  "python3/home/lostfromlight/.local/share/steam/steamapps/common/proton 9.0 (beta)/protonwaitforexitandrun/home/lostfromlight/games/clair obscur": [
     null,
     null,
     null,
-    1782474446
+    1782833784
   ],
-  "nvim/home/lostfromlight/lost/academia/network comms/lab reports/lab3/main.tex": [
+  "c/windows/system32/steam.exe": [
     null,
     null,
     null,
-    1782474466
+    1782833784
   ],
-  "perl/usr/sbin/latexmk": [
+  "/home/lostfromlight/.local/share/steam/steamapps/common/proton 9.0 (beta)/files/bin/wineserver": [
     null,
     null,
     null,
-    1782474536
+    1782833784
+  ],
+  "c/windows/system32/tabtip.exe": [
+    null,
+    null,
+    null,
+    1782833784
+  ],
+  "z/home/lostfromlight/games/clair obscur": [
+    null,
+    null,
+    null,
+    1782833784
+  ],
+  "c/users/steamuser/appdata/local/temp/is-9kton.tmp/setup.tmp/sl5=$1007c,5071275,140800,z/home/lostfromlight/games/clair obscur": [
+    null,
+    null,
+    null,
+    1782833784
+  ],
+  "c/windows/system32/winemenubuilder.exe": [
+    null,
+    null,
+    null,
+    1782833784
+  ],
+  "c/users/steamuser/appdata/local/temp/is-kjpai.tmp/cls-magic2_x64.exe": [
+    null,
+    null,
+    null,
+    1782833784
+  ],
+  "c/windows/system32/conhost.exe": [
+    null,
+    null,
+    null,
+    1782833785
+  ],
+  "c/users/steamuser/appdata/local/temp/is-kjpai.tmp/cls-srep_x64.exe": [
+    null,
+    null,
+    null,
+    1782833785
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1521538941973696724_voice-message.oggaudio": [
+    null,
+    null,
+    null,
+    1782833860
+  ],
+  "mpv/run/user/1000/endcord/1521538941973696724_voice-message.ogg": [
+    null,
+    null,
+    null,
+    1782833860
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1521540707171700969_image0.jpgimg": [
+    null,
+    null,
+    null,
+    1782833985
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1521540707171700969_image0.jpg": [
+    null,
+    null,
+    null,
+    1782833985
+  ],
+  "c/users/steamuser/appdata/local/temp/is-kjpai.tmp/rz.exe": [
+    null,
+    null,
+    null,
+    1782838456
+  ],
+  "/home/lostfromlight/.local/share/steam/steamapps/common/proton 9.0 (beta)/files/bin/winempz.exe": [
+    null,
+    null,
+    null,
+    1782838621
+  ],
+  "c/users/steamuser/saved games/clair obscur": [
+    null,
+    null,
+    null,
+    1782839246
+  ],
+  "/usr/sbin/mmsggettagsedp-1": [
+    null,
+    null,
+    null,
+    1782839661
+  ],
+  "/home/lostfromlight/.local/share/steam/steamapps/common/steamlinuxruntime_sniper/pressure-vessel/bin/pressure-vessel-wrap": [
+    null,
+    null,
+    null,
+    1782839806
+  ],
+  "/home/lostfromlight/.local/share/steam/steamapps/common/steamlinuxruntime_sniper/pressure-vessel/libexec/steam-runtime-tools-0/i386-linux-gnu-capsule-capture-libs": [
+    null,
+    null,
+    null,
+    1782839806
+  ],
+  "python3/home/lostfromlight/.local/share/steam/steamapps/common/proton 9.0 (beta)/protonwaitforexitandrun/home/lostfromlight/.steam/steam/steamapps/compatdata/2736571646/pfx/drive_c/users/steamuser/saved games/clair obscur": [
+    null,
+    null,
+    null,
+    1782839811
+  ],
+  "/home/lostfromlight/.local/share/steam/steamapps/common/proton 9.0 (beta)/files/bin/wine64c/windows/system32/steam.exe": [
+    null,
+    null,
+    null,
+    1782839811
+  ],
+  "c/windows/system32/wineboot.exe": [
+    null,
+    null,
+    null,
+    1782839811
+  ],
+  "python3/home/lostfromlight/.local/share/steam/compatibilitytools.d/ge-proton10-34/protonwaitforexitandrun/home/lostfromlight/.steam/steam/steamapps/compatdata/2736571646/pfx/drive_c/users/steamuser/saved games/clair obscur": [
+    null,
+    null,
+    null,
+    1782839866
+  ],
+  "/home/lostfromlight/.local/share/steam/compatibilitytools.d/ge-proton10-34/files/bin/wine64c/windows/system32/steam.exe": [
+    null,
+    null,
+    null,
+    1782839866
+  ],
+  "/home/lostfromlight/.local/share/steam/compatibilitytools.d/ge-proton10-34/files/bin/wineserver": [
+    null,
+    null,
+    null,
+    1782839866
+  ],
+  "//?/z/home/lostfromlight/.local/share/steam/compatibilitytools.d/ge-proton10-34/files/share/wine/../xalia/xalia.exe": [
+    null,
+    null,
+    null,
+    1782839871
+  ],
+  "c/windows/system32/rundll32.exe": [
+    null,
+    null,
+    null,
+    1782839871
+  ],
+  "msiexec/qn/i{28074c2e-4cd6-5acb-95f8-608a07aec842}remove=all": [
+    null,
+    null,
+    null,
+    1782839876
+  ],
+  "c/windows/syswow64//regsvr32.exe": [
+    null,
+    null,
+    null,
+    1782839876
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-nsswrtrygz/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1782840275
+  ],
+  "/bin/sh/usr/sbin/winetricksvcrun2022": [
+    null,
+    null,
+    null,
+    1782840866
+  ],
+  "seds/.*1h.=//": [
+    null,
+    null,
+    null,
+    1782840866
+  ],
+  "c/windows/system32/control.exe": [
+    null,
+    null,
+    null,
+    1782840871
+  ],
+  "c/windows/system32/msiexec.exe": [
+    null,
+    null,
+    null,
+    1782840876
+  ],
+  "msiexec/ic/windows/mono/mono-2.0/support//winemono-support.msi": [
+    null,
+    null,
+    null,
+    1782840876
+  ],
+  "c/windows/syswow64/rundll32.exe": [
+    null,
+    null,
+    null,
+    1782840881
+  ],
+  "y/vcrun2022/vc_redist.x86.exe": [
+    null,
+    null,
+    null,
+    1782840891
+  ],
+  "c/users/steamuser/appdata/local/temp/{d15b5fa1-15ac-4bca-9ac6-649d9561ea1b}/.cr/vc_redist.x86.exe": [
+    null,
+    null,
+    null,
+    1782840891
+  ],
+  "y/vcrun2022/vc_redist.x64.exe": [
+    null,
+    null,
+    null,
+    1782840911
+  ],
+  "c/users/steamuser/appdata/local/temp/{9df429bd-1d33-4f5c-b3f8-da51c96311f8}/.cr/vc_redist.x64.exe": [
+    null,
+    null,
+    null,
+    1782840911
+  ],
+  "c/users/steamuser/appdata/local/temp/{6098b20a-0008-4dd6-96d3-5ffeaf7b4dc7}/.be/vc_redist.x64.exe": [
+    null,
+    null,
+    null,
+    1782840916
+  ],
+  "nvim/home/lostfromlight/dotfiles/dunst/.config/dunst/dunstrc": [
+    null,
+    null,
+    null,
+    1782910154
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-gmbyymz6hx/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783011245
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-8q7uxiijje/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783011245
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-d82rsoxwbc/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783011245
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-97jklirg6c/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783011245
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-v8kbtcsgjw/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783011245
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-bk0fy6gjze/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783042556
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1522415763133173932_clipboard_image_1783042598.pngimg": [
+    null,
+    null,
+    null,
+    1783042616
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1522415763133173932_clipboard_image_1783042598.png": [
+    null,
+    null,
+    null,
+    1783042616
+  ],
+  "target/debug/tuidev": [
+    null,
+    null,
+    null,
+    1783085474
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-g9ijvcqzvf/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783087591
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-njqzulwhh5/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783087591
+  ],
+  "/usr/bin/dunst": [
+    null,
+    null,
+    null,
+    1783234164
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-c90na6dyp2/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783087591
+  ],
+  "nvim/home/lostfromlight/lost/programming/rust/ratatui/alchemy/src/main.rs": [
+    null,
+    null,
+    null,
+    1783085664
+  ],
+  "/usr/sbin/cat/sys/class/power_supply/bat0/capacity": [
+    null,
+    null,
+    null,
+    1783086825
+  ],
+  "./zig/zigbuild": [
+    null,
+    null,
+    null,
+    1783088326
+  ],
+  ".zig-cache/o/234cec94c152a87c3545d11e4a556736/build/home/lostfromlight/river/zig/zigzig/lib/home/lostfromlight/river.zig-cache/home/lostfromlight/.cache/zig": [
+    null,
+    null,
+    null,
+    1783088371
+  ],
+  "/home/lostfromlight/river/zig/zigbuild-exe": [
+    null,
+    null,
+    null,
+    1783088371
   ],
   "/usr/sbin/wl-copy": [
     null,
     null,
     null,
-    1782475147
+    1783089087
   ],
-  "nvim/dev/shm/pass.yp2lti6ziflat/1zsiak-gaming-steam_lostfromlight_.txt": [
+  "nvim/home/lostfromlight/dotfiles/river/river/init": [
     null,
     null,
     null,
-    1782477397
+    1783089327
   ],
-  "nvim/dev/shm/pass.fh3pwzkshmv1z/lsqt4s-gaming-steam.txt": [
+  "c/program files (x86)/microsoft/edgeupdate/microsoftedgeupdate.exe": [
     null,
     null,
     null,
-    1782477662
+    1783168423
   ],
-  "nvim/dev/shm/pass.5qyht9amttgly/rdc0gn-gaming-epic.txt": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-efelwfpk5c/dev/dri/card0": [
     null,
     null,
     null,
-    1782477927
+    1783168423
   ],
-  "nvim/dev/shm/pass.bplqi7paqzpor/ib5nl3-social-github.txt": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-15lvuvxw4o/dev/dri/card0": [
     null,
     null,
     null,
-    1782478242
+    1783168423
   ],
-  "nvim/dev/shm/pass.hzpbznfglcbtk/xxws2k-social-discord.txt": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-gzntijz8ak/dev/dri/card0": [
     null,
     null,
     null,
-    1782478452
+    1783168423
   ],
-  "/usr/sbin/starshipprompt": [
+  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/vivado": [
     null,
     null,
     null,
-    1782478687
+    1783168423
   ],
-  "nvim/dev/shm/pass.uowwwnn0vqe5v/f5kujx-social-aniem.txt": [
+  "/bin/bash/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/loader": [
     null,
     null,
     null,
-    1782478857
+    1783168423
   ],
-  "nvim/dev/shm/pass.cpwjyznj4x4qr/ibogmo-social-anime.txt": [
+  "/home/lostfromlight/applications/xilinx/2025.2/vivado/bin/unwrapped/lnx64.o/vivado": [
     null,
     null,
     null,
-    1782478872
+    1783168423
   ],
-  "/usr/sbin/sshgit@github.comgit-receive-pack 'naman-adhikari/passwords.git'": [
+  "firefoxhttps//drive.google.com/drive/folders/1onjrubuytlm-j1dx5t7xkvfrs-5w1bwi?usp=sharing": [
     null,
     null,
     null,
-    1782479017
+    1783168518
   ],
-  "/bin/sh/usr/sbin/xdg-open/home/lostfromlight/.password-store/gaming/ubisoft.gpg": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-dvzkoi0xkw/dev/dri/card0": [
     null,
     null,
     null,
-    1782479427
+    1783234164
   ],
-  "firefox/home/lostfromlight/.password-store/gaming/ubisoft.gpg": [
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-jqbm72em5a/dev/dri/card0": [
     null,
     null,
     null,
-    1782479427
+    1783234164
+  ],
+  "/usr/bin/speech-dispatcher": [
+    null,
+    null,
+    null,
+    1783234164
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-rvflqlccot/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783234164
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-wmpn8bpmhp/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783234164
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-7fl1ty3prl/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783234164
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1522953714846142464_image.pngimg": [
+    null,
+    null,
+    null,
+    1783229305
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1522953714846142464_image.png": [
+    null,
+    null,
+    null,
+    1783229305
+  ],
+  "/bin/bash/home/lostfromlight/.config/endcord/media-player.sh/run/user/1000/endcord/1523200823318941746_image.pngimg": [
+    null,
+    null,
+    null,
+    1783229801
+  ],
+  "/usr/bin/imv-wayland/run/user/1000/endcord/1523200823318941746_image.png": [
+    null,
+    null,
+    null,
+    1783229801
+  ],
+  "nvim/home/lostfromlight/dotfiles/endcord/.config/endcord/themes/legacy.ini": [
+    null,
+    null,
+    null,
+    1783234164
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-4fpwgvqm0e/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783234164
+  ],
+  "nvim/home/lostfromlight/dotfiles/ghostty/.config/ghostty/config": [
+    null,
+    null,
+    null,
+    1783233391
+  ],
+  "/usr/bin/gsr-kms-server/tmp/.gsr-kms-socket-x6gmaugtvf/dev/dri/card0": [
+    null,
+    null,
+    null,
+    1783234164
   ]
 }
