@@ -31,10 +31,10 @@ min_icon_size = 0
 max_icon_size = 0
 
 ### Colors
-background = "#040705"
-foreground = "#B6FFD2"
-frame_color = "#00D96F"
-highlight = "#00FF88"
+background = "#080808"
+foreground = "#D0D0D0"
+frame_color = "#383838"
+highlight = "#FFFFFF"
 
 ### Progress bar
 progress_bar = true
@@ -58,4 +58,4 @@ show_age_threshold = -1
 markup = full
 transparency = 0
 
-format = "<span foreground='#00FF88' weight='bold'>[%a]</span>\n<span foreground='#00D96F'>──────────────────────────────────────────────</span>\n<span weight='bold' size='11000'>%s</span>\n<span foreground='#8FD9AE'>%b</span>"
+format = "<span foreground='#FFFFFF' weight='bold'>[%a]</span>\n<span foreground='#383838'>──────────────────────────────────────────────</span>\n<span weight='bold' size='11000'>%s</span>\n<span foreground='#8F8F8F'>%b</span>"

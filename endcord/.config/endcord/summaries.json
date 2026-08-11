@@ -6,29 +6,29 @@
         "channel_id": "1320881498848497755",
         "summaries": [
           {
-            "message_id": "1518903753917595688",
-            "topic": "Getting into Quant",
-            "description": "Dappster considers getting into quant if langdev doesn't work out, but it's more financially lucrative than compiler dev."
+            "message_id": "1530915649985974403",
+            "topic": "Context Inserting Bool()",
+            "description": "Discussion about context inserting a builtin bool() call and overriding it."
           },
           {
-            "message_id": "1518903753917595688",
-            "topic": "Getting into Quant",
-            "description": "Exploring quant as a career option, with financial and cracked devs."
+            "message_id": "1530929641781596360",
+            "topic": "Typed Languages",
+            "description": "Discussion about types in Elixir and their impact on language development."
           },
           {
-            "message_id": "1518904905149059122",
-            "topic": "Optimizing and Improving",
-            "description": "The journey doesn't end, there are always more ways to optimize and improve."
+            "message_id": "1534941806469578863",
+            "topic": "Migration to Hanna.cloud",
+            "description": "Discussion about migration to Hanna.cloud and its punchy but fun people."
           },
           {
-            "message_id": "1518979556441067690",
-            "topic": "GitHub and Government Releases",
-            "description": "Discussion about moving off Github and the use of separate releases for government users."
+            "message_id": "1535051603382640663",
+            "topic": "Github CI Outage",
+            "description": "CI has been down for 5 hours, causing frustration and delay."
           },
           {
-            "message_id": "1519660873306865734",
-            "topic": "Networking Stocks",
-            "description": "Discussion about networking stocks and taking advantage of Cisco's excellent credit rating."
+            "message_id": "1536667295345025084",
+            "topic": "GitHub Issue",
+            "description": "Troubleshooting a weird issue with GitHub and page navigations timeout. Possible solution: Azure cloud migration."
           }
         ]
       },
@@ -36,29 +36,29 @@
         "channel_id": "1387937495047475291",
         "summaries": [
           {
-            "message_id": "1518568576183832636",
-            "topic": "Job Market and Careers",
-            "description": "Discussion about job market and career paths, including restaurants, libraries, and people shopping."
+            "message_id": "1528786972930216026",
+            "topic": "Hackintosh Reviving Project",
+            "description": "Discussion about a project to revive Hackintosh and its potential benefits."
           },
           {
-            "message_id": "1519768997447467109",
-            "topic": "North Mini-Code",
-            "description": "Discussion about the North Mini-code and its existence"
+            "message_id": "1528786972930216026",
+            "topic": "Hackintosh Reviving Project",
+            "description": "Discussion about a project to revive Hackintosh and its potential impact on the economy."
           },
           {
-            "message_id": "1519769353976025381",
-            "topic": "Canadians vs USA",
-            "description": "Discussion about the choice of team USA over Canada in the hockey match."
+            "message_id": "1536670068266635356",
+            "topic": "Vibe Code and MacOS",
+            "description": "Discussion about Vibe Code and macOS guest in UTM."
           },
           {
-            "message_id": "1519983182278164620",
-            "topic": "PS5 Purchase",
-            "description": "Aldus PageMaker purchased the PS5 on launch and plans to sell it today and buy a house."
+            "message_id": "1536731210917748816",
+            "topic": "Safari Icon Redesign",
+            "description": "Discussion about the redesign of the safari icon and its impact on users."
           },
           {
-            "message_id": "1520040502500659373",
-            "topic": "Work and Money",
-            "description": "A conversation about work and money, with some funny comments."
+            "message_id": "1536731393613107240",
+            "topic": "Loupe Redesign",
+            "description": "Discussion about the redesign of the loupe and its functionality on macOS beta."
           }
         ]
       },
@@ -77,11 +77,6 @@
         "summaries": [
           {
             "message_id": "1519031624153698494",
-            "topic": "New to Nix",
-            "description": "Discussion about learning Nix and resources for self-learning."
-          },
-          {
-            "message_id": "1519031624153698494",
             "topic": "Learning Nix",
             "description": "Discussion about learning Nix and resources for beginners."
           },
@@ -89,6 +84,21 @@
             "message_id": "1522364249400414268",
             "topic": "Tightness Issues",
             "description": "Discussion about getting throttled by ISP or GitHub, needing VPN to even make it to buildPhase."
+          },
+          {
+            "message_id": "1522349101629440000",
+            "topic": "Tilt and VPN",
+            "description": "Discussion about getting throttled by ISP or GitHub, needing a VPN to even make it to buildPhase."
+          },
+          {
+            "message_id": "1528935245611663520",
+            "topic": "Rainy Weather",
+            "description": "Conversation about rain and weather"
+          },
+          {
+            "message_id": "1528935363043786892",
+            "topic": "Rainy Weather",
+            "description": "Conversation about rain and weather"
           }
         ]
       },
@@ -96,19 +106,29 @@
         "channel_id": "1388970799183958176",
         "summaries": [
           {
-            "message_id": "1519844254967664650",
-            "topic": "Containers and Pass-Through",
-            "description": "Discussion about using containers for pass-through for GPUs and their use in server configuration."
+            "message_id": "1524223136411811840",
+            "topic": "Tangled.sh checkmarks",
+            "description": "Discussion about checking mark in Tangled.sh and its functionality."
           },
           {
-            "message_id": "1519853873735663616",
-            "topic": "Container Talk",
-            "description": "Discussion about missing container talk and using what was learned."
+            "message_id": "1524343281109045338",
+            "topic": "Tangled.sh Signed Commits",
+            "description": "Discussion about Tangled.sh showing checkmarks for signed commits and the configuration of the server."
           },
           {
-            "message_id": "1520041988576120916",
-            "topic": "Server OS Market",
-            "description": "Discussion about the market for a new server OS and its usecase."
+            "message_id": "1530661662288252969",
+            "topic": "IDE-style editor preference",
+            "description": "Discussion about liking Zed and not being an IDE-style editor person."
+          },
+          {
+            "message_id": "1534713233624273038",
+            "topic": "Skritch Release",
+            "description": "Full release of Skritch is available on homebrew, enjoy!"
+          },
+          {
+            "message_id": "1535163283370156133",
+            "topic": "Cursive and Conversation",
+            "description": "Discussion about cursive writing and turning off the cursive."
           }
         ]
       },
@@ -116,29 +136,79 @@
         "channel_id": "1436781097416654939",
         "summaries": [
           {
-            "message_id": "1521388826986156045",
-            "topic": "AI Subscriptions",
-            "description": "Discussion about faster providers and a request for an AI subscription."
+            "message_id": "1530767054112555009",
+            "topic": "Rain and Technology",
+            "description": "Discussion about rain, technology, and e-mail, e-bike, and e-ink."
           },
           {
-            "message_id": "1521388826986156045",
-            "topic": "AI Subscriptions",
-            "description": "Discussion about faster providers and a request for an AI subscription."
+            "message_id": "1530767054112555009",
+            "topic": "Rain and e-mail",
+            "description": "Discussion about rain, e-mail, e-bike, and e-ink."
           },
           {
-            "message_id": "1522250355671302274",
-            "topic": "Chinese AI",
-            "description": "Discussion about the use of Chinese AI and its affordability."
+            "message_id": "1526206583040639016",
+            "topic": "Rain and e-mail",
+            "description": "Discussion about rain, e-mail, e-bike, and e-ink."
           },
           {
-            "message_id": "1522250355671302274",
-            "topic": "Chinese AI",
-            "description": "Discussion about using Chinese AI and its cheapness."
+            "message_id": "1534837787931443293",
+            "topic": "Meta vs Anthropic",
+            "description": "Discussion about the difference between Meta and Anthropic."
           },
           {
-            "message_id": "1522252967724712108",
-            "topic": "Fable Project",
-            "description": "Discussion about starting a new Fable project with Jepsen testing built in."
+            "message_id": "1534850886264819824",
+            "topic": "Misanthropic rename",
+            "description": "Discussion about renaming Misanthropic to Misanthropic."
+          }
+        ]
+      },
+      {
+        "channel_id": "1320882404717625374",
+        "summaries": [
+          {
+            "message_id": "1524129152590942329",
+            "topic": "iowait and Epool",
+            "description": "Discussion about iowait and the impact on PTYs."
+          },
+          {
+            "message_id": "1524131493700702208",
+            "topic": "IO Waiting on PTYs",
+            "description": "Discussion about the impact of io_uring and epoll on ptys and their performance."
+          },
+          {
+            "message_id": "1524131493700702208",
+            "topic": "IO Waiting on PTYs",
+            "description": "Discussion about the impact of io_uring and epoll on ptys and their performance."
+          },
+          {
+            "message_id": "1524131957024227469",
+            "topic": "Epool vs Io_uring",
+            "description": "Comparison between Epool and Io_uring reporting on iowait, ptys, and green metrics in glances."
+          },
+          {
+            "message_id": "1524132079514685682",
+            "topic": "Epool and PTYs",
+            "description": "Discussion about the impact of Epool on PTYs and its use in glances."
+          }
+        ]
+      },
+      {
+        "channel_id": "1265734485757136956",
+        "summaries": [
+          {
+            "message_id": "1527600615482589254",
+            "topic": "Terminal Multiplexer",
+            "description": "A simpler and more polished terminal multiplexer with sidebar tabs, automatic agent icons, spaces, folders, and much more. Open source."
+          }
+        ]
+      },
+      {
+        "channel_id": "1005603569711452192",
+        "summaries": [
+          {
+            "message_id": "1534199617363644478",
+            "topic": "Change in triple-click selects",
+            "description": "Discussion about a change in how triple-click selects words in 1.3.1."
           }
         ]
       }

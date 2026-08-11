@@ -1,0 +1,15 @@
+* {
+    surface:        #161616;
+    on-surface:     #d0d0d0;
+
+    primary:        #b8b8b8;
+    on-primary:     #080808;
+
+    secondary:      #8f8f8f;
+    on-secondary:   #080808;
+
+    outline:        #383838;
+
+    error:          #4a0f0f;
+    on-error:       #ffffff;
+}

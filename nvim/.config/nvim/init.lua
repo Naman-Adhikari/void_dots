@@ -38,11 +38,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 --config for text folding
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldtext = [[v:folddashes.substitute(getline(v:foldstart),'\t',repeat(' ',&tabstop),'g')]]
 vim.cmd([[
-  highlight Folded guifg=#87cde0 guibg=#454747 gui=italic
+  highlight Folded guifg=#87cde0 guibg=#095723 gui=italic
 ]])
 
 vim.opt.fillchars = {

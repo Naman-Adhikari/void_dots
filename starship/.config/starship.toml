@@ -16,25 +16,25 @@ $username\
 $character\
 """
 
-palette = "voidcore"
+palette = "monocore"
 add_newline = false
 
-[palettes.voidcore]
-background = "#08110d"
-foreground = "#d7ffe8"
+[palettes.monocore]
+background = "#080808"
+foreground = "#d0d0d0"
 
-primary = "#5cffb3"
-secondary = "#38d27a"
-tertiary = "#1fa463"
+primary = "#f0f0f0"
+secondary = "#a8a8a8"
+tertiary = "#707070"
 
-surface = "#10241c"
-surface2 = "#163328"
+surface = "#161616"
+surface2 = "#202020"
 
-line = "#244739"
-highlight = "#7dffbf"
+line = "#383838"
+highlight = "#ffffff"
 
-muted = "#4d7d68"
-deep = "#0b1813"
+muted = "#606060"
+deep = "#101010"
 
 # ───────────────────────────────
 
@@ -113,8 +113,8 @@ format = "(fg:tertiary)[](fg:tertiary)[󰀄](fg:background bg:tertiary)[](
 # ───────────────────────────────
 
 [character] 
-success_symbol = "[╰─▶▶](fg:#5cffb3)" 
-error_symbol = "[╰─▶▶](fg:#ff5f5f)" 
+success_symbol = "[╰─▶▶](fg:#d0d0d0)" 
+error_symbol = "[╰─▶▶](fg:#4a0f0f)" 
 format = """ 
 [│](fg:line) 
 $symbol 

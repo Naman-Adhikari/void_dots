@@ -4,9 +4,9 @@ configuration {
     modi:                       "drun";
     show-icons:                 true;
     display-drun:               "";
-    display-run:               "";
+    display-run:                "";
     display-filebrowser:        "";
-    display-window:            "";
+    display-window:             "";
     drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     window-format:              "{w}   {c}   {t}";
 }
@@ -15,13 +15,11 @@ configuration {
 * {
     font:                        "Iosevka Nerd Font 10";
 
-    /* Define convenient shortcuts */
     bg:                          @surface;
     fg:                          @on-surface;
     accent:                      @primary;
     accent-muted:                @outline;
 
-    /* Colors from Material You */
     background-color:            @bg;
     text-color:                  @fg;
 }
@@ -42,8 +40,7 @@ window {
     border-radius:               20px;
     cursor:                      "default";
 
-    background-color:            #000000;
-    /*background-image: url("/home/lostfromlight/.dotfiles/home/blackwave.jpg", none);*/
+    background-color:            #080808;
 }
 
 /*****----- Main Box -----*****/

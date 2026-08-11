@@ -6,15 +6,7 @@ if test -d ~/bin
 end
 set -e fish_command_not_found
 
-# Run fastfetch w/ logo on fullscnreen
-if status is-interactive
-    if test $COLUMNS -lt 17
-        fastfetch --logo none
-    else
-        fastfetch
-    end
-end
-
+fetch
 # Atuin (history)
 atuin init fish | source
 
@@ -28,7 +20,7 @@ zoxide init fish | source
 starship init fish | source
 function __reload_theme --on-signal USR1
     clear
-    fastfetch
+    fetch
 end
 
 # -------------------------------

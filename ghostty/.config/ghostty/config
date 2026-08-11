@@ -1,45 +1,45 @@
 font-family = JetbrainsMono
 font-size = 14
 
-#background-image = "/home/lostfromlight/.dotfiles/home/blackwave.jpg"
-#background-image-opacity = 4.2
-#background-image-fit = cover
+# background-image = "/home/lostfromlight/.dotfiles/home/blackwave.jpg"
+# background-image-opacity = 4.2
+# background-image-fit = cover
 background = 000000
-foreground = 8af78a
-cursor-color = 8af78a
+foreground = d0d0d0
+cursor-color = e8e8e8
 selection-background = 333333
 selection-foreground = ffffff
 
-palette=0=1b1b1b
-palette=1=ff5555
-palette=2=50fa7b
-palette=3=f1fa8c
-palette=4=bd93f9
-palette=5=ff79c6
-palette=6=8be9fd
-palette=7=f8f8f2
-palette=8=661111
-palette=9=ff6e6e
-palette=10=69ff94
-palette=11=ffffa5
-palette=12=d6acff
-palette=13=ff92df
-palette=14=ff4444
-palette=15=ffffff
+palette = 0=080808
+palette = 1=666666
+palette = 2=888888
+palette = 3=a0a0a0
+palette = 4=777777
+palette = 5=999999
+palette = 6=b0b0b0
+palette = 7=d0d0d0
 
-
+palette = 8=303030
+palette = 9=888888
+palette = 10=a0a0a0
+palette = 11=b8b8b8
+palette = 12=999999
+palette = 13=b0b0b0
+palette = 14=c8c8c8
+palette = 15=ffffff
 
 window-show-tab-bar = never
-background-opacity = 0.1
+background-opacity = 1
 background-blur = 5
 window-decoration = false
 confirm-close-surface = false
 
 # Uncomment if needed:
 # custom-shader-animation = true
-# custom-shader           = /home/lostfromlight/.dotfiles/home/shaders/water.glsl
+# custom-shader = /home/lostfromlight/.dotfiles/home/shaders/water.glsl
 
-## KEYBINDS ##
+## KEYBINDS
+
 keybind = ctrl+s=new_split:right
 keybind = ctrl+left=goto_split:left
 keybind = ctrl+right=goto_split:right

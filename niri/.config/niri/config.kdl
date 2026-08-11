@@ -1,0 +1,826 @@
+// ============================================================
+// Startup Applications
+// ============================================================
+
+spawn-at-startup "swww-daemon"
+spawn-at-startup "sh -c 'sleep 2; quickshell --config bar'"
+spawn-at-startup "wl-paste --type text --watch cliphist store"
+spawn-at-startup "dunst"
+spawn-at-startup "pipewire"
+//spawn-at-startup "/usr/libexec/xdg-desktop-portal-wlr"
+//spawn-at-startup "/usr/libexec/xdg-desktop-portal"
+
+
+// ============================================================
+// General Settings
+// ============================================================
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
+
+
+// ============================================================
+// Outputs
+// ============================================================
+
+output "eDP-1" {
+    mode "1920x1080@144"
+    scale 1
+    position x=1280 y=0
+}
+
+output "HDMI-A-1" {
+    mode "1280x960@60"
+    scale 1
+    position x=0 y=0
+}
+
+//output "HDMI-A-1" {
+    //mode "1920x1080@60"
+    //scale 1
+    //position x=0 y=0
+//}
+
+// ============================================================
+// Input
+// ============================================================
+
+input {
+    keyboard {
+        repeat-delay 200
+		repeat-rate 35
+
+        xkb {
+            layout "us"
+            options "caps:escape"
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    focus-follows-mouse
+    workspace-auto-back-and-forth
+}
+
+
+// ============================================================
+// Hotkey Overlay
+// ============================================================
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+
+// ============================================================
+// Cursor
+// ============================================================
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 5000
+}
+
+
+// ============================================================
+// Overview
+// ============================================================
+
+overview {
+    backdrop-color "#1E1E2E"
+
+    workspace-shadow {
+        off
+    }
+}
+
+
+// ============================================================
+// Layer Rules
+// ============================================================
+
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}
+
+
+// ============================================================
+// Keybindings
+// ============================================================
+
+binds {
+
+    // --------------------------------------------------------
+    // Workspaces
+    // --------------------------------------------------------
+
+    MOD+1 {
+        focus-workspace 1
+    }
+
+    MOD+2 {
+        focus-workspace 2
+    }
+
+    MOD+3 {
+        focus-workspace 3
+    }
+
+    MOD+4 {
+        focus-workspace 4
+    }
+
+    MOD+5 {
+        focus-workspace 5
+    }
+
+    MOD+6 {
+        focus-workspace 6
+    }
+
+    MOD+7 {
+        focus-workspace 7
+    }
+
+    MOD+8 {
+        focus-workspace 8
+    }
+
+    MOD+9 {
+        focus-workspace 9
+    }
+
+
+    // --------------------------------------------------------
+    // Move current window to workspace
+    // --------------------------------------------------------
+
+    MOD+SHIFT+1 {
+        move-column-to-workspace 1
+    }
+
+    MOD+SHIFT+2 {
+        move-column-to-workspace 2
+    }
+
+    MOD+SHIFT+3 {
+        move-column-to-workspace 3
+    }
+
+    MOD+SHIFT+4 {
+        move-column-to-workspace 4
+    }
+
+    MOD+SHIFT+5 {
+        move-column-to-workspace 5
+    }
+
+    MOD+SHIFT+6 {
+        move-column-to-workspace 6
+    }
+
+    MOD+SHIFT+7 {
+        move-column-to-workspace 7
+    }
+
+    MOD+SHIFT+8 {
+        move-column-to-workspace 8
+    }
+
+    MOD+SHIFT+9 {
+        move-column-to-workspace 9
+    }
+
+
+    // --------------------------------------------------------
+    // Workspace navigation
+    // --------------------------------------------------------
+
+    MOD+TAB {
+        focus-workspace-previous
+    }
+
+    MOD+WHEELSCROLLDOWN cooldown-ms=100 {
+        focus-workspace-down
+    }
+
+    MOD+WHEELSCROLLUP cooldown-ms=100 {
+        focus-workspace-up
+    }
+
+    MOD+SHIFT+WHEELSCROLLDOWN cooldown-ms=100 {
+        move-column-to-workspace-down
+    }
+
+    MOD+SHIFT+WHEELSCROLLUP cooldown-ms=100 {
+        move-column-to-workspace-up
+    }
+
+
+    // --------------------------------------------------------
+    // Applications
+    // --------------------------------------------------------
+
+    MOD+X {
+        spawn-sh "ghostty"
+    }
+
+    MOD+B {
+        spawn-sh "zen"
+    }
+
+    MOD+SHIFT+A {
+        spawn-sh "bash -c 'pgrep rofi && pkill rofi || rofi -show drun'"
+    }
+
+    MOD+Y {
+        spawn-sh "ghostty -e yazi"
+    }
+
+    MOD+D {
+        spawn-sh "ghostty -e endcord"
+    }
+
+    MOD+E {
+        spawn-sh "ghostty -e aerc"
+    }
+
+    MOD+SHIFT+D {
+        spawn-sh "dbus-run-session flatpak run com.discordapp.Discord"
+    }
+
+    MOD+SHIFT+B {
+        spawn-sh "blender"
+    }
+
+    MOD+CTRL+L {
+        spawn-sh "sh -c 'quickshell --config lockscreen'"
+    }
+
+    MOD+V {
+        spawn-sh "quickshell -c bar ipc call clipboard toggleClipboard"
+    }
+
+    MOD+A {
+        spawn-sh "quickshell -c bar ipc call launcher toggleLauncher"
+    }
+
+    MOD+N {
+        spawn-sh "wlsunset -T 6500 -t 4000 -S 00:00 -s 00:01"
+    }
+
+    MOD+SHIFT+N {
+        spawn-sh "pkill wlsunset"
+    }
+
+    MOD+C {
+        spawn-sh "npm --prefix ~/Lost/Programming/Rust/Tauri/Lumus run tauri dev"
+    }
+
+    MOD+SHIFT+C {
+        spawn-sh "firejail --net=none wine ~/.wine/drive_c/\"Program Files\"/\"Cisco Packet Tracer 8.2.2\"/bin/PacketTracer.exe"
+    }
+
+    MOD+W {
+        spawn-sh "~/Applications/wooz"
+    }
+
+    MOD+G {
+        spawn-sh "sh -c 'pgrep -x gsr-ui >/dev/null && pkill -x gsr-ui || gsr-ui'"
+    }
+
+    MOD+SHIFT+G {
+        spawn-sh "~/dotfiles/Scripts/copy-ss.sh"
+    }
+
+    MOD+R {
+        spawn-sh "wine ~/Applications/reaper/reaper.exe"
+    }
+
+
+    // --------------------------------------------------------
+    // Window management
+    // --------------------------------------------------------
+
+    MOD+Q {
+        close-window
+    }
+
+    MOD+H {
+        focus-monitor-left
+    }
+
+    MOD+J {
+        focus-column-left
+    }
+
+    MOD+K {
+        focus-column-right
+    }
+
+    MOD+L {
+        focus-monitor-right
+    }
+
+    MOD+LEFT {
+        focus-column-left
+    }
+
+    MOD+DOWN {
+        focus-window-down
+    }
+
+    MOD+UP {
+        focus-window-up
+    }
+
+    MOD+RIGHT {
+        focus-column-right
+    }
+
+
+    // --------------------------------------------------------
+    // Move windows within workspace
+    // --------------------------------------------------------
+
+
+    MOD+SHIFT+DOWN {
+        move-window-down
+    }
+
+    MOD+SHIFT+UP {
+        move-window-up
+    }
+
+    MOD+SHIFT+RIGHT {
+        move-column-right
+    }
+
+    MOD+SHIFT+H {
+        move-column-left
+    }
+
+    MOD+SHIFT+L {
+        move-column-right
+    }
+
+    MOD+SHIFT+J {
+        move-column-to-workspace-down
+    }
+
+    MOD+SHIFT+K {
+        move-column-to-workspace-up
+    }
+
+
+
+    // --------------------------------------------------------
+    // Move to workspace edges
+    // --------------------------------------------------------
+
+    MOD+SHIFT+HOME {
+        move-column-to-first
+    }
+
+    MOD+SHIFT+END {
+        move-column-to-last
+    }
+
+    MOD+HOME {
+        focus-column-first
+    }
+
+    MOD+END {
+        focus-column-last
+    }
+
+
+
+
+    // --------------------------------------------------------
+    // Move windows between monitors
+    // --------------------------------------------------------
+
+    MOD+SHIFT+CTRL+LEFT {
+        move-column-to-monitor-left
+    }
+
+    MOD+SHIFT+CTRL+RIGHT {
+        move-column-to-monitor-right
+    }
+
+
+    MOD+SHIFT+CTRL+H {
+        move-column-to-monitor-left
+    }
+
+    MOD+SHIFT+CTRL+L {
+        move-column-to-monitor-right
+    }
+
+
+
+    // --------------------------------------------------------
+    // Column navigation with mouse
+    // --------------------------------------------------------
+
+    MOD+WHEELSCROLLRIGHT {
+        focus-column-right
+    }
+
+    MOD+WHEELSCROLLLEFT {
+        focus-column-left
+    }
+
+    MOD+CTRL+WHEELSCROLLRIGHT {
+        move-column-right
+    }
+
+    MOD+CTRL+WHEELSCROLLLEFT {
+        move-column-left
+    }
+
+
+    // --------------------------------------------------------
+    // Layout controls
+    // --------------------------------------------------------
+
+    MOD+BRACKETLEFT {
+        set-column-width "-10%"
+    }
+
+    MOD+BRACKETRIGHT {
+        set-column-width "+10%"
+    }
+
+    MOD+SHIFT+BRACKETLEFT {
+        set-window-height "-10%"
+    }
+
+    MOD+SHIFT+BRACKETRIGHT {
+        set-window-height "+10%"
+    }
+
+    MOD+CTRL+WHEELSCROLLDOWN {
+        set-window-height "-5%"
+    }
+
+    MOD+CTRL+WHEELSCROLLUP {
+        set-window-height "+5%"
+    }
+
+
+    // --------------------------------------------------------
+    // Window modes
+    // --------------------------------------------------------
+
+    MOD+SPACE {
+        toggle-window-floating
+    }
+
+    MOD+F {
+        fullscreen-window
+    }
+
+    MOD+M {
+        maximize-column
+    }
+
+
+    // --------------------------------------------------------
+    // Overview
+    // --------------------------------------------------------
+
+
+
+    // --------------------------------------------------------
+    // Screenshots / Utilities
+    // --------------------------------------------------------
+
+    PRINT {
+        screenshot
+    }
+
+    MOD+PRINT {
+        screenshot-screen write-to-disk=true
+    }
+
+    MOD+CTRL+PRINT {
+        screenshot-window write-to-disk=true
+    }
+
+
+
+    // --------------------------------------------------------
+    // Config reload
+    // --------------------------------------------------------
+
+    MOD+SHIFT+R {
+        spawn-sh "niri msg action load-config-file"
+    }
+
+
+    // --------------------------------------------------------
+    // Application restarts
+    // --------------------------------------------------------
+
+
+
+    // --------------------------------------------------------
+    // Power / Session
+    // --------------------------------------------------------
+
+    CTRL+SHIFT+R {
+        spawn-sh "loginctl reboot"
+    }
+
+    MOD+SHIFT+Q {
+        spawn-sh "loginctl terminate-session self"
+    }
+}
+
+
+// ============================================================
+// Layout
+// ============================================================
+
+layout {
+    gaps 10
+
+    center-focused-column "never"
+	always-center-single-column
+	default-column-display "normal"
+
+    background-color "transparent"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+	 preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+	default-column-width { proportion 0.5; }
+
+focus-ring {
+	on
+    width 1
+    active-color "#D0D0D0"
+}
+
+border {
+    off
+}
+
+tab-indicator {
+	off
+}
+
+insert-hint {
+        off
+        color "#1E1E2E"
+    }
+
+    struts {}
+}
+
+
+// ============================================================
+// Animations
+// ============================================================
+
+animations {
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+
+    window-close {
+        duration-ms 200
+        curve "ease-out-cubic"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1200 epsilon=0.001
+    }
+
+    screenshot-ui-open {
+        duration-ms 300
+        curve "ease-out-quad"
+    }
+
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+    }
+}
+
+
+// ============================================================
+// Window Rules
+// ============================================================
+
+// Firefox Picture-in-Picture
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+
+// Maximized applications
+window-rule {
+    match app-id=r#"firefox"#
+    open-maximized true
+}
+
+
+// ============================================================
+// File Dialogs
+// ============================================================
+
+window-rule {
+    match title=r#".*(Open|Save|Select).*"#
+    open-floating true
+    default-column-width {
+        proportion 0.0
+    }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match title=r#".*File.*"#
+    open-floating true
+    default-column-width {
+        proportion 0.0
+    }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match app-id=r#"org\.gtk\.FileChooserDialog"#
+    open-floating true
+    max-width 800
+    max-height 1000
+}
+
+
+// Google sign-in
+window-rule {
+    match title=r#".*Sign in - Google Accounts — Mozilla Firefox"#
+    open-floating true
+}
+
+
+// ============================================================
+// Applications
+// ============================================================
+
+window-rule {
+    match app-id=r#"com.mitchellh.ghostty"#
+    open-floating true
+	 default-column-width {
+        fixed 1400
+    }
+
+    default-window-height {
+        fixed 700
+    }
+}
+
+window-rule {
+    match app-id=r#"gsr-ui"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"imv"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"mpv"#
+    open-floating true
+}
+
+// ============================================================
+// System Dialogs
+// ============================================================
+
+window-rule {
+    match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"zenity"#
+    open-floating true
+}
+
+
+// ============================================================
+// Authentication Dialogs
+// ============================================================
+
+window-rule {
+    match app-id=r#"org\.kde\.polkit-kde-authentication-agent-1"#
+    open-floating true
+}
+
+window-rule {
+    match title=r#".*Authentication.*"#
+    open-floating true
+}
+
+
+// ============================================================
+// Password Managers
+// ============================================================
+
+window-rule {
+    match app-id=r#"org\.keepassxc\.KeePassXC"# title=r#".*Auto-Type.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"Bitwarden"# title=r#".*unlock.*"#
+    open-floating true
+}
+
+
+// ============================================================
+// Notification / System Utilities
+// ============================================================
+
+
+window-rule {
+    match app-id=r#"pavucontrol"#
+    open-floating true
+}
+
+
+// ============================================================
+// Steam Dialogs
+// ============================================================
+
+window-rule {
+    match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+    open-floating true
+}
+
+
+// ============================================================
+// Global Window Appearance
+// ============================================================
+
+window-rule {
+    geometry-corner-radius 5
+    clip-to-geometry true
+}
+
+
+// ============================================================
+// Inactive Window Transparency
+// ============================================================
+
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
+
+// ============================================================
+// Environment Variables
+// ============================================================
+environment {
+    MOZ_ENABLE_WAYLAND "1"
+	XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+}

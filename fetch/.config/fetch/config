@@ -1,0 +1,36 @@
+os
+host
+kernel
+uptime
+packages
+shell
+wm
+terminal
+cpu
+gpu
+memory
+disk
+
+# appearance
+
+label_color=white
+separator=━
+
+shading_mode=ascii
+shading= .,:;irsXA253hMHGS#9B&@
+
+box=1
+
+# logo
+
+logo_outer=white
+logo_inner=white
+
+# 3d
+
+light=top-left
+spin=xy
+speed=0.6
+size=1.1
+depth=2.5
+height=36
