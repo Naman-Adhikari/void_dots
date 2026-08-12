@@ -5,457 +5,645 @@ import QtQuick.Effects
 import Quickshell.Wayland
 
 Rectangle {
-	id: root
-	required property LockContext context
-	readonly property ColorGroup colors: Window.active ? palette.active : palette.inactive
-
-	color: "#020403"
-
-	// BACKGROUND IMAGE
-	Image {
-		anchors.fill: parent
-
-		source: "lock.png"
-
-		fillMode: Image.PreserveAspectCrop
-		smooth: true
-		mipmap: true
-	}
-
-	// dark overlay
-	Rectangle {
-		anchors.fill: parent
-		color: "#000000"
-		opacity: 0.35
-	}
-
-	// Ambient glow top left
-	Rectangle {
-		width: 700
-		height: 700
-
-		x: -250
-		y: -250
-
-		color: "#0d7a54"
-		opacity: 0.05
-
-		radius: width / 2
-
-		layer.enabled: true
-		layer.effect: MultiEffect {
-			blurEnabled: true
-			blur: 1.0
-		}
-	}
-
-	// Ambient glow bottom right
-	Rectangle {
-		width: 600
-		height: 600
-
-		x: parent.width - 350
-		y: parent.height - 350
-
-		color: "#0b5c42"
-		opacity: 0.04
-
-		radius: width / 2
-
-		layer.enabled: true
-		layer.effect: MultiEffect {
-			blurEnabled: true
-			blur: 1.0
-		}
-	}
-
-	// Scan lines
-	Column {
-		anchors.fill: parent
-		spacing: 6
-		opacity: 0.03
-
-		Repeater {
-			model: 300
-
-			Rectangle {
-				width: parent.width
-				height: 1
-				color: "#0d7a54"
-			}
-		}
-	}
-
-	// CLOCK
-	Label {
-		id: clock
-		property var date: new Date()
-
-		anchors {
-			horizontalCenter: parent.horizontalCenter
-			top: parent.top
-			topMargin: 90
-		}
-
-		renderType: Text.NativeRendering
-
-		font {
-			family: "Share Tech Mono"
-			pointSize: 78
-			letterSpacing: 6
-			bold: true
-		}
-
-		color: "#d7ffe9"
-
-		style: Text.Outline
-		styleColor: "#0d7a54"
-
-		Timer {
-			running: true
-			repeat: true
-			interval: 1000
-
-			onTriggered: clock.date = new Date()
-		}
-
-		text: {
-			const hours = this.date.getHours().toString().padStart(2, '0');
-			const minutes = this.date.getMinutes().toString().padStart(2, '0');
-			return `${hours}:${minutes}`;
-		}
-	}
-
-	// DATE
-	Label {
-		anchors {
-			horizontalCenter: parent.horizontalCenter
-			top: clock.bottom
-			topMargin: 6
-		}
-
-		font {
-			family: "Share Tech Mono"
-			pointSize: 16
-			letterSpacing: 3
-		}
-
-		color: "#4d8c72"
-
-		text: Qt.formatDateTime(clock.date, "dddd  |  MMMM d")
-	}
-
-	// MAIN PANEL
-	Rectangle {
-		id: panel
-
-		width: 560
-		height: 240
-
-		anchors.centerIn: parent
-
-		color: "#06100d"
-		opacity: 0.82
-
-		border.width: 2
-		border.color: "#0d7a54"
-
-		layer.enabled: true
-		layer.effect: MultiEffect {
-			shadowEnabled: true
-			shadowColor: "#0d7a54"
-			shadowBlur: 0.8
-		}
-
-		// corner accents
-		Rectangle {
-			width: 40
-			height: 4
-			color: "#0d7a54"
+    id: root
+
+    required property LockContext context
+
+    color: "#000000"
+
+    // ============================================================
+    // BACKGROUND
+    // ============================================================
 
-			anchors.top: parent.top
-			anchors.left: parent.left
-		}
+    Image {
+        anchors.fill: parent
 
-		Rectangle {
-			width: 4
-			height: 40
-			color: "#0d7a54"
+        source: "lock.png"
 
-			anchors.top: parent.top
-			anchors.left: parent.left
-		}
+        fillMode: Image.PreserveAspectCrop
+        smooth: true
+        mipmap: true
+    }
 
-		Rectangle {
-			width: 40
-			height: 4
-			color: "#0d7a54"
+    // Slight darkening over the entire image.
+    // Keeps the artwork visible but makes the UI readable.
+    Rectangle {
+        anchors.fill: parent
 
-			anchors.bottom: parent.bottom
-			anchors.right: parent.right
-		}
+        color: "#000000"
+        opacity: 0.18
+    }
 
-		Rectangle {
-			width: 4
-			height: 40
-			color: "#0d7a54"
+    // ============================================================
+    // RIGHT SIDE GRADIENT
+    //
+    // Darkens the empty area on the right without covering the
+    // character with a giant opaque panel.
+    // ============================================================
 
-			anchors.bottom: parent.bottom
-			anchors.right: parent.right
-		}
+    Rectangle {
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            right: parent.right
+        }
+
+        width: parent.width * 0.58
 
-		// decorative lines
-		Rectangle {
-			width: 120
-			height: 2
+        gradient: Gradient {
+            GradientStop {
+                position: 0.0
+                color: "#00000000"
+            }
+
+            GradientStop {
+                position: 0.35
+                color: "#00000088"
+            }
 
-			color: "#0d7a54"
-			opacity: 0.45
+            GradientStop {
+                position: 0.75
+                color: "#000000dd"
+            }
 
-			anchors {
-				top: parent.top
-				right: parent.right
-				topMargin: 18
-				rightMargin: 20
-			}
-		}
+            GradientStop {
+                position: 1.0
+                color: "#000000f5"
+            }
+        }
+    }
 
-		Rectangle {
-			width: 90
-			height: 2
+    // ============================================================
+    // SUBTLE TEXTURE / SCANLINES
+    // ============================================================
 
-			color: "#0d7a54"
-			opacity: 0.45
+    Column {
+        anchors.fill: parent
 
-			anchors {
-				bottom: parent.bottom
-				left: parent.left
-				bottomMargin: 18
-				leftMargin: 20
-			}
-		}
+        spacing: 7
 
-		ColumnLayout {
-			anchors.fill: parent
-			anchors.margins: 34
+        opacity: 0.025
 
-			spacing: 26
+        Repeater {
+            model: 300
 
-			Label {
-				text: "AUTHENTICATION REQUIRED"
+            Rectangle {
+                width: parent.width
+                height: 1
 
-				font {
-					family: "Share Tech Mono"
-					pointSize: 22
-					letterSpacing: 4
-					bold: true
-				}
+                color: "#ffffff"
+            }
+        }
+    }
 
-				color: "#c6ffe3"
+    // ============================================================
+    // LEFT TOP SYSTEM LABEL
+    // ============================================================
 
-				Layout.alignment: Qt.AlignHCenter
-			}
+    Column {
+        anchors {
+            left: parent.left
+            top: parent.top
 
-			RowLayout {
-				spacing: 16
+            leftMargin: 34
+            topMargin: 28
+        }
 
-				TextField {
-					id: passwordBox
+        spacing: 4
 
-					Layout.fillWidth: true
+        Text {
+            text: "SYSTEM // LOCKED"
 
-					implicitHeight: 58
+            color: "#c8c8c8"
 
-					focus: true
+            font {
+                family: "JetBrainsMono Nerd Font"
+                pixelSize: 12
+                bold: true
+                letterSpacing: 2
+            }
+        }
 
-					enabled: !root.context.unlockInProgress
+        Rectangle {
+            width: 110
+            height: 1
 
-					echoMode: TextInput.Password
-					inputMethodHints: Qt.ImhSensitiveData
+            color: "#777777"
+        }
 
-					padding: 14
+        Text {
+            text: "AUTHORIZATION REQUIRED"
 
-					color: "#d7ffe9"
+            color: "#555555"
 
-					font {
-						family: "Share Tech Mono"
-						pointSize: 15
-						letterSpacing: 2
-					}
+            font {
+                family: "JetBrainsMono Nerd Font"
+                pixelSize: 9
+                letterSpacing: 1.5
+            }
+        }
+    }
 
-					placeholderText: "ENTER PASSWORD"
-					placeholderTextColor: "#467661"
+    // ============================================================
+    // RIGHT AUTHENTICATION AREA
+    // ============================================================
 
-					background: Rectangle {
-						color: "#07110d"
+    Item {
+        id: authArea
 
-						border.width: 2
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            right: parent.right
+        }
 
-						border.color: passwordBox.activeFocus
-							? "#0d7a54"
-							: "#184634"
+        width: Math.min(parent.width * 0.42, 620)
 
-						Rectangle {
-							width: parent.width
-							height: 2
+        // --------------------------------------------------------
+        // Main authentication column
+        // --------------------------------------------------------
 
-							color: "#0d7a54"
+        Column {
+            id: authColumn
 
-							anchors.bottom: parent.bottom
+            width: Math.min(parent.width - 100, 430)
 
-							opacity: passwordBox.activeFocus ? 1 : 0.3
-						}
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+            }
 
-						layer.enabled: true
-						layer.effect: MultiEffect {
-							shadowEnabled: true
-							shadowColor: "#0d7a54"
-							shadowBlur: 0.7
-						}
-					}
+            spacing: 18
 
-					onTextChanged: root.context.currentText = this.text
-					onAccepted: root.context.tryUnlock()
+            // ----------------------------------------------------
+            // CLOCK
+            // ----------------------------------------------------
 
-					Connections {
-						target: root.context
+            Text {
+                id: clock
 
-						function onCurrentTextChanged() {
-							passwordBox.text = root.context.currentText
-						}
-					}
-				}
+                property var date: new Date()
 
-				Button {
-					text: "UNLOCK"
+                width: parent.width
 
-					implicitHeight: 58
-					padding: 20
+                horizontalAlignment: Text.AlignLeft
 
-					focusPolicy: Qt.NoFocus
+                renderType: Text.NativeRendering
 
-					enabled: !root.context.unlockInProgress
-							 && root.context.currentText !== ""
+                color: "#f0f0f0"
 
-					onClicked: root.context.tryUnlock()
+                font {
+                    family: "JetBrainsMono Nerd Font"
+                    pixelSize: 72
+                    bold: true
+                    letterSpacing: 2
+                }
 
-					contentItem: Text {
-						text: parent.text
+                Timer {
+                    running: true
+                    repeat: true
+                    interval: 1000
 
-						color: "#dfffee"
+                    onTriggered: clock.date = new Date()
+                }
 
-						font {
-							family: "Share Tech Mono"
-							pointSize: 13
-							bold: true
-							letterSpacing: 3
-						}
+                text: {
+                    const hours =
+                        date.getHours()
+                            .toString()
+                            .padStart(2, "0")
 
-						horizontalAlignment: Text.AlignHCenter
-						verticalAlignment: Text.AlignVCenter
-					}
+                    const minutes =
+                        date.getMinutes()
+                            .toString()
+                            .padStart(2, "0")
 
-					background: Rectangle {
-						color: parent.pressed
-							? "#0a5c40"
-							: "#0d7a54"
+                    return hours + ":" + minutes
+                }
+            }
 
-						border.width: 2
-						border.color: "#6cb69a"
+            // ----------------------------------------------------
+            // DATE
+            // ----------------------------------------------------
 
-						Rectangle {
-							width: parent.width
-							height: 2
+            Text {
+                width: parent.width
 
-							color: "#dfffee"
-							opacity: 0.4
+                text:
+                    Qt.formatDateTime(
+                        clock.date,
+                        "dddd, MMMM d"
+                    ).toUpperCase()
 
-							anchors.top: parent.top
-						}
+                color: "#777777"
 
-						layer.enabled: true
-						layer.effect: MultiEffect {
-							shadowEnabled: true
-							shadowColor: "#0d7a54"
-							shadowBlur: 0.8
-						}
-					}
-				}
-			}
+                font {
+                    family: "JetBrainsMono Nerd Font"
+                    pixelSize: 11
+                    letterSpacing: 3
+                }
+            }
 
-			Label {
-				visible: root.context.showFailure
+            // Decorative divider
 
-				text: "ACCESS DENIED"
+            Rectangle {
+                width: parent.width
+                height: 1
 
-				font {
-					family: "Share Tech Mono"
-					pointSize: 13
-					bold: true
-					letterSpacing: 4
-				}
+                color: "#333333"
 
-				color: "#d94b6c"
+                Rectangle {
+                    width: 80
+                    height: 1
 
-				Layout.alignment: Qt.AlignHCenter
-			}
-		}
-	}
+                    color: "#d0d0d0"
+                }
+            }
 
-	// bottom label
-	Label {
-		text: "NEURAL INTERFACE SECURE LOCK"
+            Item {
+                width: 1
+                height: 10
+            }
 
-		anchors {
-			bottom: parent.bottom
-			horizontalCenter: parent.horizontalCenter
-			bottomMargin: 24
-		}
+            // ----------------------------------------------------
+            // AUTH LABEL
+            // ----------------------------------------------------
 
-		font {
-			family: "Share Tech Mono"
-			pointSize: 11
-			letterSpacing: 4
-		}
+            Text {
+                text: "IDENTITY VERIFICATION"
 
-		color: "#2f6953"
-	}
+                color: "#cfcfcf"
 
-	// emergency button
-	Button {
-		text: "EMERGENCY EXIT"
+                font {
+                    family: "JetBrainsMono Nerd Font"
+                    pixelSize: 13
+                    bold: true
+                    letterSpacing: 3
+                }
+            }
 
-		anchors {
-			right: parent.right
-			bottom: parent.bottom
-			rightMargin: 24
-			bottomMargin: 24
-		}
+            Text {
+                text: "ENTER SYSTEM CREDENTIAL"
 
-		opacity: 0.5
+                color: "#555555"
 
-		onClicked: context.unlocked()
+                font {
+                    family: "JetBrainsMono Nerd Font"
+                    pixelSize: 9
+                    letterSpacing: 2
+                }
+            }
 
-		contentItem: Text {
-			text: parent.text
+            Item {
+                width: 1
+                height: 4
+            }
 
-			color: "#6fa88f"
+            // ====================================================
+            // PASSWORD FIELD
+            // ====================================================
 
-			font {
-				family: "Share Tech Mono"
-				pointSize: 10
-				letterSpacing: 2
-			}
+            TextField {
+                id: passwordBox
 
-			horizontalAlignment: Text.AlignHCenter
-			verticalAlignment: Text.AlignVCenter
-		}
+                width: parent.width
+                height: 58
 
-		background: Rectangle {
-			color: "#09120f"
+                focus: true
 
-			border.width: 1
-			border.color: "#245743"
-		}
-	}
+                enabled: !root.context.unlockInProgress
+
+                echoMode: TextInput.Password
+
+                inputMethodHints:
+                    Qt.ImhSensitiveData
+
+                padding: 16
+
+                color: "#eeeeee"
+
+                placeholderText: "PASSWORD"
+
+                placeholderTextColor: "#555555"
+
+                font {
+                    family: "JetBrainsMono Nerd Font"
+                    pixelSize: 13
+                    letterSpacing: 2
+                }
+
+                background: Rectangle {
+                    color: "#080808"
+
+                    border.width: 1
+
+                    border.color:
+                        passwordBox.activeFocus
+                        ? "#bdbdbd"
+                        : "#303030"
+
+                    // Left accent
+                    Rectangle {
+                        width: 3
+                        height: parent.height
+
+                        color:
+                            passwordBox.activeFocus
+                            ? "#e0e0e0"
+                            : "#555555"
+
+                        Behavior on color {
+                            ColorAnimation {
+                                duration: 120
+                            }
+                        }
+                    }
+
+                    // Bottom line
+                    Rectangle {
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            bottom: parent.bottom
+                        }
+
+                        height: 1
+
+                        color:
+                            passwordBox.activeFocus
+                            ? "#d0d0d0"
+                            : "#222222"
+                    }
+                }
+
+                onTextChanged:
+                    root.context.currentText = text
+
+                onAccepted:
+                    root.context.tryUnlock()
+
+                Connections {
+                    target: root.context
+
+                    function onCurrentTextChanged() {
+                        if (
+                            passwordBox.text
+                            !== root.context.currentText
+                        ) {
+                            passwordBox.text =
+                                root.context.currentText
+                        }
+                    }
+                }
+            }
+
+            // ====================================================
+            // UNLOCK BUTTON
+            // ====================================================
+
+            Button {
+                id: unlockButton
+
+                width: parent.width
+                height: 52
+
+                enabled:
+                    !root.context.unlockInProgress
+                    && root.context.currentText !== ""
+
+                focusPolicy: Qt.NoFocus
+
+                onClicked:
+                    root.context.tryUnlock()
+
+                contentItem: Text {
+                    text:
+                        root.context.unlockInProgress
+                        ? "VERIFYING..."
+                        : "UNLOCK SYSTEM"
+
+                    color:
+                        unlockButton.enabled
+                        ? "#ffffff"
+                        : "#555555"
+
+                    horizontalAlignment:
+                        Text.AlignHCenter
+
+                    verticalAlignment:
+                        Text.AlignVCenter
+
+                    font {
+                        family: "JetBrainsMono Nerd Font"
+                        pixelSize: 11
+                        bold: true
+                        letterSpacing: 3
+                    }
+                }
+
+                background: Rectangle {
+                    color:
+                        unlockButton.down
+                        ? "#eeeeee"
+                        : unlockButton.hovered
+                            ? "#222222"
+                            : "#111111"
+
+                    border.width: 1
+
+                    border.color:
+                        unlockButton.enabled
+                        ? "#888888"
+                        : "#303030"
+
+                    Rectangle {
+                        visible: unlockButton.hovered
+
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            top: parent.top
+                        }
+
+                        height: 1
+
+                        color: "#ffffff"
+                    }
+                }
+            }
+
+            // ====================================================
+            // STATUS / FAILURE
+            // ====================================================
+
+            Item {
+                width: parent.width
+                height: 24
+
+                Text {
+                    anchors {
+                        left: parent.left
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    visible: root.context.showFailure
+
+                    text: "// ACCESS DENIED"
+
+                    color: "#cfcfcf"
+
+                    font {
+                        family: "JetBrainsMono Nerd Font"
+                        pixelSize: 10
+                        bold: true
+                        letterSpacing: 2
+                    }
+                }
+
+                Text {
+                    anchors {
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    text:
+                        root.context.unlockInProgress
+                        ? "PROCESSING"
+                        : "READY"
+
+                    color:
+                        root.context.unlockInProgress
+                        ? "#dddddd"
+                        : "#555555"
+
+                    font {
+                        family: "JetBrainsMono Nerd Font"
+                        pixelSize: 9
+                        letterSpacing: 2
+                    }
+                }
+            }
+        }
+    }
+
+    // ============================================================
+    // BOTTOM LEFT
+    // ============================================================
+
+    Text {
+        anchors {
+            left: parent.left
+            bottom: parent.bottom
+
+            leftMargin: 34
+            bottomMargin: 28
+        }
+
+        text: "NIRI / WAYLAND  //  SECURE SESSION"
+
+        color: "#4a4a4a"
+
+        font {
+            family: "JetBrainsMono Nerd Font"
+            pixelSize: 9
+            letterSpacing: 2
+        }
+    }
+
+    // ============================================================
+    // BOTTOM RIGHT DECORATION
+    // ============================================================
+
+    Row {
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+
+            rightMargin: 34
+            bottomMargin: 28
+        }
+
+        spacing: 8
+
+        Rectangle {
+            width: 5
+            height: 5
+            color: "#888888"
+        }
+
+        Text {
+            text: "LOCKED"
+
+            color: "#777777"
+
+            font {
+                family: "JetBrainsMono Nerd Font"
+                pixelSize: 9
+                letterSpacing: 2
+            }
+        }
+    }
+
+    // ============================================================
+    // ESCAPE / EMERGENCY EXIT
+    // ============================================================
+
+    Button {
+        anchors {
+            right: parent.right
+            top: parent.top
+
+            rightMargin: 34
+            topMargin: 28
+        }
+
+        width: 110
+        height: 28
+
+        opacity: 0.35
+
+        text: "EXIT"
+
+        onClicked:
+            context.unlocked()
+
+        contentItem: Text {
+            text: parent.text
+
+            color: "#aaaaaa"
+
+            horizontalAlignment:
+                Text.AlignHCenter
+
+            verticalAlignment:
+                Text.AlignVCenter
+
+            font {
+                family: "JetBrainsMono Nerd Font"
+                pixelSize: 9
+                letterSpacing: 2
+            }
+        }
+
+        background: Rectangle {
+            color: "#080808"
+
+            border.width: 1
+            border.color: "#555555"
+        }
+    }
+
+    // Always refocus password field when clicked anywhere
+    MouseArea {
+        anchors.fill: parent
+
+        z: -1
+
+        onClicked:
+            passwordBox.forceActiveFocus()
+    }
+
+    Component.onCompleted: {
+        passwordBox.forceActiveFocus()
+    }
 }
