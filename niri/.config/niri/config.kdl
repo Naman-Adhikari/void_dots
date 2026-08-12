@@ -3,7 +3,7 @@
 // ============================================================
 
 spawn-at-startup "swww-daemon"
-spawn-at-startup "sh -c 'sleep 2; quickshell --config bar'"
+spawn-at-startup "sh" "-c" "sleep 2; quickshell --config bar"
 spawn-at-startup "wl-paste --type text --watch cliphist store"
 spawn-at-startup "dunst"
 spawn-at-startup "pipewire"
@@ -228,6 +228,10 @@ binds {
 
     MOD+X {
         spawn-sh "ghostty"
+    }
+
+    MOD+SHIFT+V {
+        spawn-sh "vivado"
     }
 
     MOD+B {
@@ -526,17 +530,46 @@ binds {
 
 
     // --------------------------------------------------------
-    // Application restarts
+    // Volume and brightness
     // --------------------------------------------------------
 
+    XF86AudioLowerVolume {
+        spawn-sh "pamixer -d 10"
+    }
 
+    XF86AudioRaiseVolume {
+        spawn-sh "pamixer -i 10"
+    }
 
+    XF86AudioMute {
+        spawn-sh "pamixer -t "
+    }
+
+	F12{
+		spawn-sh "brightnessctl s +5%"
+	}
+
+	F11{
+		spawn-sh "brightnessctl s 5%-"
+	}
+
+	XF86MonBrightnessUp{
+		spawn-sh "brightnessctl s +5%"
+	}
+
+	XF86MonBrightnessDown{
+		spawn-sh "brightnessctl s 5%-"
+	}
     // --------------------------------------------------------
     // Power / Session
     // --------------------------------------------------------
 
     CTRL+SHIFT+R {
         spawn-sh "loginctl reboot"
+    }
+
+    MOD+ESCAPE {
+        spawn-sh "loginctl poweroff"
     }
 
     MOD+SHIFT+Q {

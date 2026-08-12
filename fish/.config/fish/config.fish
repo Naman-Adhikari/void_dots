@@ -23,6 +23,9 @@ function __reload_theme --on-signal USR1
     fetch
 end
 
+set -gx XCURSOR_THEME "Volantes Cursors"
+set -gx XCURSOR_SIZE 24
+
 # -------------------------------
 # Abbreviations
 # -------------------------------

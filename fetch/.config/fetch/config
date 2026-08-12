@@ -16,7 +16,7 @@ disk
 label_color=white
 separator=━
 
-shading_mode=ascii
+shading_mode=blocks
 shading= .,:;irsXA253hMHGS#9B&@
 
 box=1
@@ -29,8 +29,8 @@ logo_inner=white
 # 3d
 
 light=top-left
-spin=xy
+spin=y
 speed=0.6
-size=1.1
+size=1.0
 depth=2.5
 height=36
