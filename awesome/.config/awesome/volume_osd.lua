@@ -1,116 +1,148 @@
 local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
-local beautiful = require("beautiful")
 
 local volume_osd = {}
-
--- ============================================================
--- Monochrome volume OSD
--- ============================================================
 
 local popup
 local hide_timer
 
 local function create_popup(screen)
-	-- Main popup
 	popup = wibox({
 		screen = screen,
-		width = 300,
-		height = 120,
+
+		width = 310,
+		height = 52,
+
 		visible = false,
 		ontop = true,
-		type = "notification",
-		bg = "#111111",
+		type = "normal",
+
+		bg = "#151515",
 		fg = "#eeeeee",
-		border_width = 5,
-		border_color = "#444444",
-		shape = gears.shape.rect,
+
+		border_width = 1,
+		border_color = "#383838",
+
+		shape = gears.shape.rounded_rect,
 	})
 
-	-- Volume icon
-	local icon = wibox.widget({
-		text = "󰕾",
-		font = "Sans 28",
-		align = "center",
-		valign = "center",
-		widget = wibox.widget.textbox,
-	})
+	-- Speaker icon
+	local icon = wibox.widget.textbox()
 
-	-- Percentage text
-	local percentage = wibox.widget({
-		text = "0%",
-		font = "Sans Bold 16",
-		align = "center",
-		valign = "center",
-		widget = wibox.widget.textbox,
-	})
+	icon.text = "󰕾"
+	icon.font = "Symbols Nerd Font Mono 18"
+	icon.align = "center"
+	icon.valign = "center"
 
-	-- Progress bar
+	-- Percentage
+	local percentage = wibox.widget.textbox()
+
+	percentage.text = "0%"
+	percentage.font = "Sans Bold 12"
+	percentage.align = "center"
+	percentage.valign = "center"
+
+	-- Volume progress bar
 	local progress = wibox.widget({
 		max_value = 100,
 		value = 0,
-		forced_height = 8,
-		shape = gears.shape.rounded_bar,
+
+		forced_width = 185,
+		forced_height = 4,
 
 		background_color = "#333333",
 		color = "#eeeeee",
 
+		shape = gears.shape.rounded_bar,
+
 		widget = wibox.widget.progressbar,
 	})
 
-	popup:setup({
-		{
-			{
-				icon,
-				percentage,
-				spacing = 10,
-				layout = wibox.layout.fixed.horizontal,
-			},
+	-- Main horizontal layout
+	local layout = wibox.layout.fixed.horizontal()
 
-			progress,
+	layout.spacing = 14
 
-			spacing = 12,
-			layout = wibox.layout.fixed.vertical,
-		},
+	-- Icon
+	layout:add(wibox.container.place(icon, {
+		forced_width = 22,
+		halign = "center",
+		valign = "center",
+	}))
 
-		margins = 22,
-		widget = wibox.container.margin,
-	})
+	-- Progress bar
+	layout:add(wibox.container.place(progress, {
+		forced_width = 185,
+		halign = "center",
+		valign = "center",
+	}))
+
+	-- Percentage
+	layout:add(wibox.container.place(percentage, {
+		forced_width = 40,
+		halign = "center",
+		valign = "center",
+	}))
+
+	-- Outer padding
+	popup.widget = wibox.container.margin(layout, 14, 14, 10, 10)
 
 	popup._icon = icon
 	popup._percentage = percentage
 	popup._progress = progress
 end
 
-local function update_icon(muted, volume)
+------------------------------------------------------------
+-- Change speaker icon according to volume
+------------------------------------------------------------
+
+local function update_icon(volume, muted)
 	if muted then
+		-- Muted
 		popup._icon.text = "󰖁"
 	elseif volume == 0 then
+		-- Zero volume
 		popup._icon.text = "󰕿"
-	elseif volume < 50 then
+	elseif volume <= 30 then
+		-- Low volume
+		popup._icon.text = "󰕿"
+	elseif volume <= 70 then
+		-- Medium volume
 		popup._icon.text = "󰖀"
 	else
+		-- High volume
 		popup._icon.text = "󰕾"
 	end
 end
 
+------------------------------------------------------------
+-- Show OSD
+------------------------------------------------------------
+
 function volume_osd.show()
 	local screen = awful.screen.focused()
 
+	-- Create popup if it doesn't exist
 	if not popup then
 		create_popup(screen)
 	end
 
-	-- Move popup to the currently focused screen
 	popup.screen = screen
+
+	--------------------------------------------------------
+	-- Get current volume
+	--------------------------------------------------------
 
 	awful.spawn.easy_async_with_shell("pamixer --get-volume --get-mute", function(stdout)
 		local volume = stdout:match("(%d+)")
-		local mute = stdout:match("true")
+		local muted = stdout:match("true") ~= nil
 
 		volume = tonumber(volume) or 0
-		local muted = mute ~= nil
+
+		------------------------------------------------
+		-- Update UI
+		------------------------------------------------
 
 		if muted then
 			popup._percentage.text = "Muted"
@@ -120,31 +152,49 @@ function volume_osd.show()
 			popup._progress.value = volume
 		end
 
-		update_icon(muted, volume)
+		------------------------------------------------
+		-- Update speaker icon
+		------------------------------------------------
 
-		-- Center on screen
+		update_icon(volume, muted)
+
+		------------------------------------------------
+		-- Position
+		------------------------------------------------
+
 		awful.placement.centered(popup, {
 			parent = screen,
+
 			margins = {
 				top = -850,
 			},
 		})
 
+		------------------------------------------------
+		-- Show
+		------------------------------------------------
+
 		popup.visible = true
 
-		-- Reset hide timer
+		------------------------------------------------
+		-- Restart hide timer
+		------------------------------------------------
+
 		if hide_timer then
 			hide_timer:stop()
 		end
 
 		hide_timer = gears.timer({
 			timeout = 1.2,
-			autostart = true,
+
 			single_shot = true,
+
 			callback = function()
 				popup.visible = false
 			end,
 		})
+
+		hide_timer:start()
 	end)
 end
 
