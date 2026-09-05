@@ -6,7 +6,6 @@ if test -d ~/bin
 end
 set -e fish_command_not_found
 
-fetch
 # Atuin (history)
 atuin init fish | source
 
@@ -15,12 +14,14 @@ zoxide init fish | source
 
 # Direnv (environment)
 #direnv hook fish | source
+#set -x ANTHROPIC_BASE_URL "https://agentrouter.org/"
+#set -x ANTHROPIC_AUTH_TOKEN "sk-UKK05ADbvzodPVX5kL6l8RzTX7maroufnM2srzY98D9WZcUm"
+#set -x ANTHROPIC_API_KEY "sk-UKK05ADbvzodPVX5kL6l8RzTX7maroufnM2srzY98D9WZcUm"
 
 # Starship prompt
 starship init fish | source
 function __reload_theme --on-signal USR1
     clear
-    fetch
 end
 
 set -gx XCURSOR_THEME "Volantes Cursors"

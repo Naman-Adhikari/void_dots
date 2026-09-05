@@ -37,7 +37,7 @@ output "HDMI-A-1" {
 }
 
 //output "HDMI-A-1" {
-    //mode "1920x1080@60"
+  //  mode "1920x1080@60"
     //scale 1
     //position x=0 y=0
 //}
@@ -53,13 +53,13 @@ input {
 
         xkb {
             layout "us"
-            options "caps:escape"
+            //options "caps:escape"
         }
     }
 
     touchpad {
-        tap
-        natural-scroll
+		tap
+		tap-button-map "left-middle-right"
     }
 
     focus-follows-mouse
@@ -222,6 +222,7 @@ binds {
     }
 
 
+
     // --------------------------------------------------------
     // Applications
     // --------------------------------------------------------
@@ -241,6 +242,10 @@ binds {
     MOD+SHIFT+A {
         spawn-sh "bash -c 'pgrep rofi && pkill rofi || rofi -show drun'"
     }
+
+	MOD+P {
+    spawn-sh "pkill -x wl-mirror 2>/dev/null || wl-mirror --fullscreen --fullscreen-output HDMI-A-1 --scaling fit eDP-1"
+}
 
     MOD+Y {
         spawn-sh "ghostty -e yazi"
