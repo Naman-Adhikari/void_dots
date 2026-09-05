@@ -1,6 +1,7 @@
 pcall(require, "luarocks.loader")
-
--- Standard awesome library
+-------------------------------------------------------------------
+---Standard awesome library
+-------------------------------------------------------------------
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
@@ -12,16 +13,35 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 require("awful.hotkeys_popup.keys")
-
---startup comms
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- Startup Commands
+-------------------------------------------------------------------
 awful.spawn.with_shell("dunst")
 awful.spawn.with_shell("wl-paste --type text --watch cliphist store")
 awful.spawn.with_shell("pipewire")
 --awful.spawn.with_shell("gsr-ui")
-
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
 -- some settings
+-------------------------------------------------------------------
 awful.spawn("xset r rate 200 35")
-
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- Error Handling
+-------------------------------------------------------------------
 -- {{{ Error handling
 if awesome.startup_errors then
 	naughty.notify({
@@ -50,18 +70,29 @@ do
 	end)
 end
 -- }}}
-
--- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- Variable Definitions and Theme
+-------------------------------------------------------------------
 beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/elric/theme.lua")
 
--- This is used later as the default terminal and editor to run.
 terminal = "ghostty"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 modkey = "Mod4"
-
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- HDMI Configs
+-------------------------------------------------------------------
 -- Monitor
 --awful.spawn.with_shell("xrandr --output HDMI-1-0 --mode 1280x960 --rate 60 --left-of eDP-1")
 
@@ -69,8 +100,14 @@ modkey = "Mod4"
 --awful.spawn.with_shell("xrandr --output HDMI-1-0 --auto --right-of eDP-1")
 -- TV / Projector mirroring
 awful.spawn.with_shell("xrandr --output HDMI-1-0 --auto --same-as eDP-1")
-
+---
+---
+---
+---
+---
+-------------------------------------------------------------------
 -- Table of layouts to cover with awful.layout.inc, order matters.
+-------------------------------------------------------------------
 awful.layout.layouts = {
 	awful.layout.suit.tile,
 	awful.layout.suit.floating,
@@ -89,12 +126,23 @@ awful.layout.layouts = {
 	-- awful.layout.suit.corner.sw,
 	-- awful.layout.suit.corner.se,
 }
--- }}}
-
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
 -- Keyboard map indicator and switcher
+-------------------------------------------------------------------
 mykeyboardlayout = awful.widget.keyboardlayout()
-
--- {{{ Wibar
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- WIbar
+-------------------------------------------------------------------
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
@@ -164,7 +212,14 @@ local tasklist_buttons = gears.table.join(
 		awful.client.focus.byidx(-1)
 	end)
 )
-
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- Wallpaper
+-------------------------------------------------------------------
 local function set_wallpaper(s)
 	-- Wallpaper
 	if beautiful.wallpaper then
@@ -177,19 +232,14 @@ local function set_wallpaper(s)
 	end
 end
 
--- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
-	-- Wallpaper
 	set_wallpaper(s)
-
 	-- Each screen has its own tag table.
 	awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
-	-- Create a promptbox for each screen
 	s.mypromptbox = awful.widget.prompt()
-	-- Create an imagebox widget which will contain an icon indicating which layout we're using.
 	-- We need one layoutbox per screen.
 	s.mylayoutbox = awful.widget.layoutbox(s)
 	s.mylayoutbox:buttons(gears.table.join(
@@ -242,9 +292,14 @@ awful.screen.connect_for_each_screen(function(s)
 		},
 	})
 end)
--- }}}
-
--- {{{ Key bindings
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- Keybinds
+-------------------------------------------------------------------
 globalkeys = gears.table.join(
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
@@ -326,7 +381,7 @@ globalkeys = gears.table.join(
 	end, { description = "restore minimized", group = "client" }),
 
 	-- for rofi
-	awful.key({ modkey }, "a", function()
+	awful.key({ modkey, "Shift" }, "p", function()
 		awful.spawn.with_shell("pgrep rofi && pkill rofi || rofi -show drun")
 	end),
 
@@ -399,17 +454,11 @@ globalkeys = gears.table.join(
 		)
 	end, { description = "open Cisco Packet Tracer", group = "launcher" }),
 
-	-- Mod+W already opens Awesome's main menu, so Wooz uses Mod+Shift+W.
-	awful.key({ modkey, "Shift" }, "w", function()
-		awful.spawn("~/Applications/wooz")
-	end, { description = "open wooz", group = "launcher" }),
-
-	-- Mod+N is already Awesome's client-minimize binding.
 	awful.key({ modkey }, "n", function()
 		awful.spawn.with_shell([[
             redshift -O 3400
     ]])
-	end, { description = "toggle night light", group = "system" }),
+	end, { description = " night light", group = "system" }),
 
 	awful.key({ modkey, "Shift" }, "n", function()
 		awful.spawn.with_shell([[
@@ -469,9 +518,6 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "Escape", function()
 		awful.spawn.with_shell("loginctl poweroff")
 	end, { description = "power off", group = "system" }),
-
-	-- Niri's config reload equivalent for Awesome.
-	awful.key({ modkey, "Shift" }, "r", awesome.restart, { description = "reload Awesome", group = "awesome" }),
 
 	awful.key({ modkey, "Shift" }, "Home", function()
 		local s = awful.screen.focused()
@@ -542,10 +588,14 @@ clientkeys = gears.table.join(
 		c:raise()
 	end, { description = "(un)maximize horizontally", group = "client" })
 )
-
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- Workspace binds
+-------------------------------------------------------------------
 for i = 1, 9 do
 	globalkeys = gears.table.join(
 		globalkeys,
@@ -599,15 +649,24 @@ clientbuttons = gears.table.join(
 		awful.mouse.client.resize(c)
 	end)
 )
-
--- Set keys
-root.keys(globalkeys)
--- }}}
-
--- {{{ Rules
--- Rules to apply to new clients (through the "manage" signal).
+	-- 
+	--
+	--
+	--
+	--
+	-------------------------------------------------------------------
+	-- Set keys
+	-------------------------------------------------------------------
+	- root.keys(globalkeys)
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+--- Rules
+-------------------------------------------------------------------
 awful.rules.rules = {
-	-- All clients will match this rule.
 	{
 		rule = {},
 		properties = {
@@ -643,8 +702,6 @@ awful.rules.rules = {
 				"xtightvncviewer",
 			},
 
-			-- Note that the name property shown in xprop might be set slightly after creation of the client
-			-- and the name shown there might not match defined rules here.
 			name = {
 				"Event Tester", -- xev.
 			},
@@ -657,17 +714,10 @@ awful.rules.rules = {
 		properties = { floating = true },
 	},
 
-	-- Add titlebars to normal clients and dialogs
 	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
-
-	-- Set Firefox to always map on the tag named "2" on screen 1.
-	-- { rule = { class = "Firefox" },
-	--   properties = { screen = 1, tag = "2" } },
 }
--- }}}
 
 -- {{{ Signals
--- Signal function to execute when a new client appears.
 client.connect_signal("manage", function(c)
 	-- Set the windows at the slave,
 	-- i.e. put it at the end of others instead of setting it master.
@@ -679,7 +729,6 @@ client.connect_signal("manage", function(c)
 	end
 end)
 
--- Add a titlebar if titlebars_enabled is set to true in the rules.
 client.connect_signal("request::titlebars", function(c)
 	-- buttons for the titlebar
 	local buttons = gears.table.join(

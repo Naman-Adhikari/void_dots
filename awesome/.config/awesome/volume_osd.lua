@@ -23,9 +23,9 @@ local function create_popup(screen)
 		type = "notification",
 		bg = "#111111",
 		fg = "#eeeeee",
-		border_width = 1,
+		border_width = 5,
 		border_color = "#444444",
-		shape = gears.shape.rounded_rect,
+		shape = gears.shape.rect,
 	})
 
 	-- Volume icon
