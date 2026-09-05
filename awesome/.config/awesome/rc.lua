@@ -398,11 +398,6 @@ globalkeys = gears.table.join(
 		menubar.show()
 	end, { description = "show the menubar", group = "launcher" }),
 
-	-- ============================================================
-	-- Niri-compatible application / utility bindings
-	-- (Layout-related Niri bindings are intentionally not copied.)
-	-- ============================================================
-
 	-- Applications
 	awful.key({ modkey, "Shift" }, "v", function()
 		awful.spawn("vivado")
@@ -649,15 +644,15 @@ clientbuttons = gears.table.join(
 		awful.mouse.client.resize(c)
 	end)
 )
-	-- 
-	--
-	--
-	--
-	--
-	-------------------------------------------------------------------
-	-- Set keys
-	-------------------------------------------------------------------
-	- root.keys(globalkeys)
+--
+--
+--
+--
+--
+-------------------------------------------------------------------
+-- Set keys
+-------------------------------------------------------------------
+root.keys(globalkeys)
 --
 --
 --
@@ -783,4 +778,3 @@ end)
 client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
--- }}}
