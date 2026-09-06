@@ -229,17 +229,118 @@ local function setup(s)
 	local promptbox = awful.widget.prompt()
 
 	-----------------------------------------------------------------
-	-- KEYBOARD LAYOUT
+	-- POWER PROFILE
 	-----------------------------------------------------------------
 
-	local keyboardlayout = awful.widget.keyboardlayout()
+	local power_profile = wibox.widget.textbox()
 
-	keyboardlayout.font = "JetBrainsMono Nerd Font 9"
-	keyboardlayout.align = "center"
-	keyboardlayout.valign = "center"
-	keyboardlayout.forced_width = 32
+	power_profile.font = "JetBrainsMono Nerd Font 9"
+	power_profile.align = "center"
+	power_profile.valign = "center"
+	power_profile.forced_width = 32
 
-	local keyboard_module = module(margin(keyboardlayout, 7, 7, 3, 3), module_bg)
+	---------------------------------------------------------------
+	-- UPDATE ICON FROM CURRENT GOVERNOR
+	---------------------------------------------------------------
+
+	local function update_power_profile()
+		awful.spawn.easy_async_with_shell(
+			"cpupower frequency-info 2>/dev/null | grep -oP 'governor \"\\K[^\"]+' | head -1",
+			function(stdout)
+				local governor = stdout:gsub("%s+", "")
+
+				if governor == "performance" then
+					power_profile.text = "󰓅"
+				elseif governor == "powersave" then
+					power_profile.text = "󰾆"
+				else
+					power_profile.text = "󰚥"
+				end
+			end
+		)
+	end
+
+	---------------------------------------------------------------
+	-- SET GOVERNOR
+	---------------------------------------------------------------
+
+	local function set_power_profile(governor)
+		awful.spawn.easy_async_with_shell(
+			"sudo -n /usr/sbin/cpupower frequency-set -g " .. governor,
+			function(stdout, stderr, reason, exit_code)
+				if exit_code == 0 then
+					update_power_profile()
+
+					local name = governor == "performance" and "Performance" or "Power Save"
+
+					local icon = governor == "performance" and "󰓅" or "󰾆"
+
+					awful.spawn.with_shell(
+						"notify-send "
+							.. string.format("-a 'Power Profile' -i power-profile 'Power Profile' '%s %s'", icon, name)
+					)
+				else
+					power_profile.text = "󰚥"
+
+					awful.spawn.with_shell("notify-send -a 'Power Profile' 'Power Profile' 'Failed to switch profile'")
+
+					print("cpupower error: " .. stderr)
+				end
+			end
+		)
+	end
+	---------------------------------------------------------------
+	-- INITIAL STATE
+	---------------------------------------------------------------
+
+	update_power_profile()
+
+	---------------------------------------------------------------
+	-- MENU
+	---------------------------------------------------------------
+
+	local power_menu = awful.menu({
+		theme = {
+			width = 160,
+			height = 30,
+
+			font = "JetBrainsMono Nerd Font 9",
+
+			bg_normal = module_bg,
+			fg_normal = fg,
+
+			bg_focus = active_bg,
+			fg_focus = active_fg,
+
+			border_width = 0,
+		},
+
+		items = {
+			{
+				"Performance",
+				function()
+					set_power_profile("performance")
+				end,
+			},
+
+			{
+				"Power Save",
+				function()
+					set_power_profile("powersave")
+				end,
+			},
+		},
+	})
+
+	---------------------------------------------------------------
+	-- CLICK BUTTON
+	---------------------------------------------------------------
+
+	power_profile:buttons(gears.table.join(awful.button({}, 1, function()
+		power_menu:toggle()
+	end)))
+
+	local power_module = module(margin(power_profile, 7, 7, 3, 3), module_bg)
 
 	-----------------------------------------------------------------
 	-- CLOCK
@@ -374,7 +475,7 @@ local function setup(s)
 		{
 			layout = wibox.layout.fixed.horizontal,
 
-			margin(keyboard_module, 3, 3, 2, 2),
+			margin(power_module, 3, 3, 2, 2),
 
 			margin(systray_module, 3, 3, 2, 2),
 
