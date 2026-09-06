@@ -44,9 +44,9 @@ end
 theme.font = "sans 8"
 
 -- Monochrome palette
-theme.bg_normal = "#181818"
+theme.bg_normal = "#000000"
 theme.bg_focus = "#303030"
-theme.bg_urgent = "#505050"
+theme.bg_urgent = "#6e706e"
 theme.bg_minimize = "#202020"
 
 theme.fg_normal = "#a0a0a0"
