@@ -34,6 +34,7 @@ awful.spawn.with_shell("dunst")
 awful.spawn.with_shell("pipewire")
 awful.spawn.with_shell("picom -b")
 awful.spawn.with_shell("~/.config/awesome/clipboard-watch.sh")
+awful.spawn.with_shell("synclient TapButton1=1 TapButton2=0 TapButton3=2")
 
 -------------------------------------------------------------------
 -- X SETTINGS
@@ -270,6 +271,13 @@ globalkeys = gears.table.join(
 
 	awful.key({ modkey }, "i", function()
 		awful.tag.viewnext()
+	end, {
+		description = "next workspace",
+		group = "tag",
+	}),
+
+	awful.key({ modkey }, "u", function()
+		awful.tag.viewprev()
 	end, {
 		description = "next workspace",
 		group = "tag",
@@ -1084,4 +1092,13 @@ awful.screen.connect_for_each_screen(function(s)
 	-----------------------------------------------------------------
 
 	wibar.setup(s)
+	gears.timer.start_new(1, function()
+		for s in screen do
+			if beautiful.wallpaper then
+				gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+			end
+		end
+
+		return false
+	end)
 end)
