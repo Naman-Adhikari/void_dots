@@ -91,6 +91,70 @@ local tasklist_buttons = gears.table.join(
 	end)
 )
 
+-----------------------------------------------------------------
+-- HDMI MONITOR
+-----------------------------------------------------------------
+
+local hdmi_icon = wibox.widget.textbox()
+hdmi_icon.text = "󰍹"
+hdmi_icon.font = "JetBrainsMono Nerd Font 12"
+hdmi_icon.align = "center"
+hdmi_icon.valign = "center"
+hdmi_icon.forced_width = 22
+
+local function set_hdmi_layout(command)
+	awful.spawn.easy_async_with_shell(command, function(_, stderr, _, exit_code)
+		if exit_code == 0 then
+			awful.spawn.with_shell("notify-send -a 'HDMI Monitor' 'Display Layout' 'HDMI layout updated'")
+		else
+			awful.spawn.with_shell("notify-send -a 'HDMI Monitor' 'Display Layout' 'Failed to apply HDMI layout'")
+			print("HDMI xrandr error: " .. (stderr or "unknown error"))
+		end
+	end)
+end
+
+local hdmi_menu = awful.menu({
+	theme = {
+		width = 210,
+		height = 30,
+		font = "JetBrainsMono Nerd Font 10",
+		bg_normal = module_bg,
+		fg_normal = fg,
+		bg_focus = active_bg,
+		fg_focus = active_fg,
+		border_width = 0,
+	},
+
+	items = {
+		{
+			"1280x960, left",
+			function()
+				set_hdmi_layout("xrandr --output HDMI-1-0 --mode 1280x960 --rate 60 --left-of eDP-1")
+			end,
+		},
+
+		{
+			"1920x1080, right",
+			function()
+				set_hdmi_layout("xrandr --output HDMI-1-0 --mode 1920x1080 --right-of eDP-1")
+			end,
+		},
+
+		{
+			"1920x1080, mirror",
+			function()
+				set_hdmi_layout("xrandr --output HDMI-1-0 --mode 1920x1080 --same-as eDP-1")
+			end,
+		},
+	},
+})
+
+hdmi_icon:buttons(gears.table.join(awful.button({}, 1, function()
+	hdmi_menu:toggle()
+end)))
+
+local hdmi_module = module(margin(hdmi_icon, 7, 7, 3, 3), module_bg)
+
 ---------------------------------------------------------------------
 -- BATTERY
 ---------------------------------------------------------------------
@@ -476,6 +540,8 @@ local function setup(s)
 			layout = wibox.layout.fixed.horizontal,
 
 			margin(power_module, 3, 3, 2, 2),
+
+			margin(hdmi_module, 3, 3, 2, 2),
 
 			margin(systray_module, 3, 3, 2, 2),
 
