@@ -1,7 +1,9 @@
 [opener]
 pdf = [
   { run = 'zathura "$@"', desc = "zathura" },
-  { run = 'okular "$@"', desc = "okular" }
+  { run = 'okular "$@"', desc = "okular" },
+  { run = 'xournalpp "$@"', desc = "xournal" }
+
 ]
 
 image = [
@@ -21,11 +23,17 @@ audio = [
   { run = 'mpv --force-window "$@"', desc = "mpv" }
 ]
 
+html = [
+  { run = 'firefox "$@"', orphan = true, desc = "Firefox" },
+  { run = 'nvim "$@"', block = true, desc = "nvim" }
+]
+
 [open]
 prepend_rules = [
   { name = "*.wv", use = [ "audio" ] },
   { mime = "application/pdf", use = [ "pdf" ] },
   { mime = "image/*", use = [ "image" ] },
+   { mime = "text/html", use = [ "html" ] },
   { mime = "application/json", use = [ "text" ] },
   { name = "*.jsonc", use = [ "text" ] },
   { mime = "text/*", use = [ "text" ] },

@@ -480,10 +480,11 @@ local function setup(s)
 	-----------------------------------------------------------------
 
 	local systray = wibox.widget.systray()
+	systray.base_size = 12
 
-	systray.base_size = 14
+	local systray_centered = wibox.container.place(systray, "center", "center")
 
-	local systray_module = module(margin(systray, 7, 7, 3, 3), module_bg)
+	local systray_module = module(margin(systray_centered, 7, 7, 0, 0), module_bg)
 
 	-----------------------------------------------------------------
 	-- WIBAR

@@ -2,8 +2,9 @@ set -g fish_greeting
 
 # Add ~/bin to PATH if it exists
 if test -d ~/bin
-    set -gx PATH ~/bin $PATH
+    fish_add_path ~/bin
 end
+
 set -e fish_command_not_found
 
 # Atuin (history)
@@ -14,18 +15,18 @@ zoxide init fish | source
 
 # Direnv (environment)
 #direnv hook fish | source
-#set -x ANTHROPIC_BASE_URL "https://agentrouter.org/"
-#set -x ANTHROPIC_AUTH_TOKEN "sk-UKK05ADbvzodPVX5kL6l8RzTX7maroufnM2srzY98D9WZcUm"
-#set -x ANTHROPIC_API_KEY "sk-UKK05ADbvzodPVX5kL6l8RzTX7maroufnM2srzY98D9WZcUm"
 
 # Starship prompt
 starship init fish | source
 function __reload_theme --on-signal USR1
-    clear
 end
 
 set -gx XCURSOR_THEME "Volantes Cursors"
 set -gx XCURSOR_SIZE 24
+
+function __wezterm_set_cwd --on-event fish_prompt
+    printf '\e]7;file://%s%s\e\\' (hostname) "$PWD"
+end
 
 # -------------------------------
 # Abbreviations
@@ -50,11 +51,13 @@ set -Ux EDITOR nvim
 # Functions
 # -------------------------------
 function y
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
-    set cwd (cat "$tmp")
-    if test -n "$cwd" -a "$cwd" != "$PWD"
-        cd "$cwd"
-    end
-    rm -f "$tmp"
+set tmp (mktemp -t "yazi-cwd.XXXXXX")
+yazi $argv --cwd-file="$tmp"
+set cwd (cat "$tmp")
+if test -n "$cwd" -a "$cwd" != "$PWD"
+cd "$cwd"
 end
+rm -f "$tmp"
+end
+
+fish_add_path /home/lostfromlight/.spicetify

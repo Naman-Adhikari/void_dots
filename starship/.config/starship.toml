@@ -1,23 +1,26 @@
-format = """
-$newline
-[░▒▓](fg:#0b1813)\
-$os\
-$directory\
-$git_branch\
-$git_status\
-$fill\
-$nodejs\
-$bun\
-$deno\
-$aws\
-$cmd_duration\
-$time\
-$username\
-$character\
-"""
 
+# ═══════════════════════════════════════════════
+# STARSHIP — MONOCORE / SECTION 9
+# ═══════════════════════════════════════════════
+
+add_newline = true
 palette = "monocore"
-add_newline = false
+
+format = """
+[░▒▓](fg:deep)\
+$directory\
+$fill\
+$time\
+$username
+$character"""
+
+command_timeout = 500
+scan_timeout = 10
+follow_symlinks = false
+
+# ───────────────────────────────────────────────
+# PALETTE
+# ───────────────────────────────────────────────
 
 [palettes.monocore]
 background = "#080808"
@@ -30,92 +33,63 @@ tertiary = "#707070"
 surface = "#161616"
 surface2 = "#202020"
 
-line = "#383838"
+line = "#303030"
 highlight = "#ffffff"
 
 muted = "#606060"
 deep = "#101010"
 
-# ───────────────────────────────
-
-[os]
-disabled = false
-format = "[](fg:secondary)[ ](fg:background bg:secondary)[](fg:secondary bg:surface)"
-
-# ───────────────────────────────
+# ───────────────────────────────────────────────
+# DIRECTORY
+# ───────────────────────────────────────────────
 
 [directory]
+disabled = false
 home_symbol = "󰋜 ~"
-truncation_length = 2
-truncation_symbol = "󰇘/"
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
 read_only = " "
 
-format = "[](fg:tertiary)[ ](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $path ](fg:foreground bg:surface2)[](fg:surface2)"
+format = "[ ](fg:tertiary)[  ](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[  $path  ](fg:foreground bg:surface2)[$read_only](fg:muted bg:surface2)[](fg:surface2)"
 
-# ───────────────────────────────
-
-[git_branch]
-symbol = "󰘬 "
-format = "(fg:secondary)[](fg:secondary)[$symbol](fg:background bg:secondary)[](fg:secondary bg:surface)[ $branch ](fg:highlight bg:surface)"
-
-[git_status]
-format = "[( $all_status )](fg:foreground bg:surface)[](fg:surface)"
-
-# ───────────────────────────────
-
-[nodejs]
-symbol = " "
-format = "(fg:tertiary)[](fg:tertiary)[$symbol](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $version ](fg:foreground bg:surface2)[](fg:surface2)"
-
-# ───────────────────────────────
-
-[bun]
-symbol = "󰳓 "
-format = "(fg:secondary)[](fg:secondary)[$symbol](fg:background bg:secondary)[](fg:secondary bg:surface)[ $version ](fg:foreground bg:surface)[](fg:surface)"
-
-# ───────────────────────────────
-
-[deno]
-symbol = "🜲 "
-format = "(fg:tertiary)[](fg:tertiary)[$symbol](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $version ](fg:foreground bg:surface2)[](fg:surface2)"
-
-# ───────────────────────────────
-
-[aws]
-symbol = "󰸏 "
-format = "(fg:secondary)[](fg:secondary)[$symbol](fg:background bg:secondary)[](fg:secondary bg:surface)[ $profile ](fg:foreground bg:surface)[](fg:surface)"
-
-# ───────────────────────────────
+# ───────────────────────────────────────────────
+# SPACER
+# ───────────────────────────────────────────────
 
 [fill]
-symbol = "━"
+symbol = "─"
 style = "fg:line"
 
-# ───────────────────────────────
-
-[cmd_duration]
-min_time = 500
-format = "(fg:tertiary)[](fg:tertiary)[󱎫](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $duration ](fg:highlight bg:surface2)[](fg:surface2)"
-
-# ───────────────────────────────
+# ───────────────────────────────────────────────
+# TIME
+# ───────────────────────────────────────────────
 
 [time]
 disabled = false
 time_format = "%H:%M"
-format = "(fg:secondary)[](fg:secondary)[󱑍](fg:background bg:secondary)[](fg:secondary bg:surface)[ $time ](fg:foreground bg:surface)[](fg:surface)"
 
-# ───────────────────────────────
+format = "[](fg:secondary)[ 󱑍 ](fg:background bg:secondary)[](fg:secondary bg:surface)[  $time  ](fg:foreground bg:surface)[](fg:surface)"
+
+# ───────────────────────────────────────────────
+# USER
+# ───────────────────────────────────────────────
 
 [username]
+disabled = false
 show_always = true
-format = "(fg:tertiary)[](fg:tertiary)[󰀄](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[ $user ](fg:foreground bg:surface2)[](fg:surface2)"
 
-# ───────────────────────────────
+format = "[](fg:tertiary)[ 󰀄 ](fg:background bg:tertiary)[](fg:tertiary bg:surface2)[  $user  ](fg:foreground bg:surface2)[](fg:surface2)"
 
-[character] 
-success_symbol = "[╰─▶▶](fg:#d0d0d0)" 
-error_symbol = "[╰─▶▶](fg:#4a0f0f)" 
+# ───────────────────────────────────────────────
+# PROMPT
+# ───────────────────────────────────────────────
+
+[character]
+success_symbol = "[╰─▶](fg:#d0d0d0)"
+error_symbol = "[╰─▶](fg:#8a4444)"
+vimcmd_symbol = "[╰─◀](fg:#a8a8a8)"
+
 format = """ 
-[│](fg:line) 
 $symbol 
 """

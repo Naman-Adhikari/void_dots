@@ -35,9 +35,7 @@ awful.spawn.with_shell("pipewire")
 awful.spawn.with_shell("picom -b")
 awful.spawn.with_shell("~/.config/awesome/clipboard-watch.sh")
 awful.spawn.with_shell("synclient TapButton1=1 TapButton2=0 TapButton3=2")
-
--------------------------------------------------------------------
--- X SETTINGS
+awful.spawn.with_shell("xmodmap -e 'clear Lock' -e 'keycode 66 = r R'")
 -------------------------------------------------------------------
 
 awful.spawn("xset r rate 200 35")
@@ -106,22 +104,6 @@ beautiful.fg_focus = "#f2f2f2"
 beautiful.border_normal = "#242424"
 beautiful.border_focus = "#8a8a8a"
 beautiful.border_marked = "#5f5f5f"
-
--------------------------------------------------------------------
--- HDMI
--------------------------------------------------------------------
-
-awful.spawn.with_shell("xrandr --output HDMI-1-0 --mode 1280x960 --rate 60 --left-of eDP-1")
-
--- TV / Projector
--- awful.spawn.with_shell(
---     "xrandr --output HDMI-1-0 --auto --right-of eDP-1"
--- )
-
--- TV / Projector mirroring
--- awful.spawn.with_shell(
---     "xrandr --output HDMI-1-0 --auto --same-as eDP-1"
--- )
 
 -------------------------------------------------------------------
 -- LAYOUTS
@@ -214,13 +196,9 @@ globalkeys = gears.table.join(
 	}),
 
 	awful.key({ modkey }, "Tab", function()
-		awful.client.focus.history.previous()
-
-		if client.focus then
-			client.focus:raise()
-		end
+		awful.client.focus.byidx(1)
 	end, {
-		description = "go back",
+		description = "focuz next client",
 		group = "client",
 	}),
 
