@@ -82,7 +82,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/elric/theme.l
 
 beautiful.font = "JetBrainsMono Nerd Font 9"
 
-terminal = "ghostty"
+terminal = "wezterm"
 
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
@@ -435,21 +435,21 @@ globalkeys = gears.table.join(
 	}),
 
 	awful.key({ modkey }, "y", function()
-		awful.spawn("ghostty -e yazi")
+		awful.spawn("wezterm -e yazi")
 	end, {
 		description = "open Yazi",
 		group = "launcher",
 	}),
 
 	awful.key({ modkey }, "d", function()
-		awful.spawn("ghostty -e endcord")
+		awful.spawn("wezterm -e endcord")
 	end, {
 		description = "open Endcord",
 		group = "launcher",
 	}),
 
 	awful.key({ modkey }, "e", function()
-		awful.spawn("ghostty -e aerc")
+		awful.spawn("wezterm -e aerc")
 	end, {
 		description = "open aerc",
 		group = "launcher",

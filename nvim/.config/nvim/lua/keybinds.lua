@@ -1,7 +1,7 @@
 --keys for opening specific files
 
 vim.keymap.set("n", "<leader>oc", function()
-	vim.cmd("edit ~/dotfiles/niri/.config/niri/config.kdl")
+	vim.cmd("edit ~/dotfiles/awesome/.config/awesome/rc.lua")
 end)
 
 --vim.keymap.set("n", "<leader>ob", function()

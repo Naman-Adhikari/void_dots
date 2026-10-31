@@ -1,3 +1,39 @@
+--[[
+============================
+SECTION 09 // COMPACT HUD
+============================
+]]
+
+wezterm.on("update-status", function(window, _)
+	if window:leader_is_active() then
+		window:set_left_status(wezterm.format({
+			{ Background = { Color = "#eeeeee" } },
+			{ Foreground = { Color = "#090909" } },
+			{ Attribute = { Intensity = "Bold" } },
+			{ Text = " ◈09 " },
+
+			{ Background = { Color = "#252525" } },
+			{ Foreground = { Color = "#eeeeee" } },
+			{ Text = " CMD " },
+
+			{ Background = { Color = "#eeeeee" } },
+			{ Foreground = { Color = "#090909" } },
+			{ Text = " ▰ " },
+
+			{ Background = { Color = "#090909" } },
+		}))
+	else
+		window:set_left_status("")
+	end
+
+	window:set_left_status(wezterm.format({
+		{ Background = { Color = colors.arrow_foreground_leader } },
+		{ Text = prefix },
+		arrow_foreground,
+		arrow_background,
+		{ Text = solid_left_arrow },
+	}))
+end)
 // ============================================================
 // Startup Applications
 // ============================================================

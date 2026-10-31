@@ -7,6 +7,9 @@ end
 
 set -e fish_command_not_found
 
+#fetch
+fetch
+
 # Atuin (history)
 atuin init fish | source
 
@@ -26,6 +29,21 @@ set -gx XCURSOR_SIZE 24
 
 function __wezterm_set_cwd --on-event fish_prompt
     printf '\e]7;file://%s%s\e\\' (hostname) "$PWD"
+end
+
+function __wezterm_git_branch --on-event fish_prompt
+    set -l branch ""
+
+    if git rev-parse --is-inside-work-tree >/dev/null 2>&1
+        set branch (git branch --show-current 2>/dev/null)
+
+        if test -z "$branch"
+            set branch "detached"
+        end
+    end
+
+    set -l encoded (printf '%s' "$branch" | base64 | string trim)
+    printf '\e]1337;SetUserVar=git_branch=%s\a' "$encoded"
 end
 
 # -------------------------------
